@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center_horizontal" 
+   >
+
+    <RelativeLayout
+        android:id="@+id/MainHome_relative_content"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+    	android:background="#ffffff"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/homescreen_img_txt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/txt_button" />
+
+        <ImageView
+            android:id="@+id/homescreen_img_email"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/em_button" />
+
+        <RelativeLayout
+            android:id="@+id/homescreen_total_bars_Rel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/homescreen_yellowbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/homescreen_group_img"
+                android:layout_alignLeft="@+id/homescreen_group_img"
+                android:clickable="true"
+                android:src="@drawable/yellow" />
+            
+            <TextView 
+                android:id="@+id/homescreen_Yellow_total_mails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/homescreen_yellowbar"
+                android:layout_alignLeft="@+id/homescreen_yellowbar"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="30dip"
+                android:layout_marginLeft="10dip"
+                />
+
+            <ImageView
+                android:id="@+id/homescreen_greenbar"
+                android:layout_width="75dip"
+                android:layout_height="300dip"
+                android:layout_alignBottom="@+id/homescreen_yellowbar"
+                android:layout_toRightOf="@+id/homescreen_yellowbar"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/green1" />
+            
+             <TextView 
+                android:id="@+id/homescreen_Green_total_mails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/homescreen_greenbar"
+                android:layout_alignLeft="@+id/homescreen_greenbar"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dip"
+                android:layout_marginLeft="10dip"
+                />
+
+            <ImageView
+                android:id="@+id/homescreen_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/homescreen_greenbar"
+                android:layout_toRightOf="@+id/homescreen_greenbar"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/white" />
+            
+              <TextView 
+                android:id="@+id/homescreen_White_total_mails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/homescreen_white"
+                android:layout_alignLeft="@+id/homescreen_white"
+                android:layout_marginTop="30dip"
+                android:layout_marginLeft="5dip"
+                android:textColor="@android:color/black"
+                />
+            
+
+            <ImageView
+                android:id="@+id/homescreen_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/homescreen_white"
+                android:layout_toRightOf="@+id/homescreen_white"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/blue" />
+
+           <TextView 
+                android:id="@+id/homescreen_Blue_total_mails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/homescreen_blue"
+                android:layout_alignLeft="@+id/homescreen_blue"
+                android:layout_marginTop="30dip"
+                android:layout_marginLeft="5dip"
+                android:textColor="@android:color/black"
+                />
+            
+            <RelativeLayout
+                android:id="@+id/homescreen_bottom_Rel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:id="@+id/homescreen_today"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/t" />
+
+                <ImageView
+                    android:id="@+id/homescreen_yestarday"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/homescreen_today"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/y" />
+
+                <ImageView
+                    android:id="@+id/homescreen_threedays"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/homescreen_yestarday"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/threedays" />
+
+                <ImageView
+                    android:id="@+id/homescreen_search"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:layout_toRightOf="@+id/homescreen_threedays"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/search" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/homescreen_group_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/homescreen_bottom_Rel"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:src="@drawable/group" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

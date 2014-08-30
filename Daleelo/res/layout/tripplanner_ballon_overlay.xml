@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/balloon_main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/balloon_overlay_black"
+    android:paddingBottom="25dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <!-- your click region must be some sort of layout container using @id/balloon_inner_layout -->
+
+    <LinearLayout
+        android:id="@+id/balloon_inner_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/balloon_inner_layout_one"
+        android:layout_toRightOf="@+id/balloon_add_remove_layout"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/balloon_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="balloon_item_title"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/balloon_item_snippet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="balloon_item_snippet"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- a close control is optional - it must use @id/balloon_close -->
+
+    <RelativeLayout
+        android:id="@+id/balloon_inner_layout_one"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp" >
+
+        <ImageView
+            android:id="@+id/next_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_bluebtn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/balloon_add_remove_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/balloon_item_title" >
+
+        <ImageView
+            android:id="@+id/tripplanner_add_balloon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_view" 
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/tripplanner_remove_balloon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/remove_view"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

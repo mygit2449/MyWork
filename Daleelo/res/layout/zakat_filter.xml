@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+		<RelativeLayout
+            android:id="@+id/zakat_filter_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/zakat_filter_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Zakat Filter Settings"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" 
+                android:paddingLeft="5dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/zakat_filter_BTN_done"
+                />
+                        
+            <Button 
+            	android:id="@+id/zakat_filter_BTN_done"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:layout_marginLeft="5dp"
+            	android:background="@drawable/btn_icon_done_blue"
+            />
+            
+        </RelativeLayout>
+        
+        <TextView 
+        	android:id="@+id/zakat_filter_TXT_title"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/zakat_filter_REL_title"
+        	android:text="Sort Zakat By"
+        	android:layout_centerHorizontal="true"
+        	android:padding="10dp"
+        	android:textColor="@color/black"
+        	android:textSize="18sp"
+        	
+        />
+        
+        <RadioGroup 
+        	android:id="@+id/zakat_filter_radiogroup"
+        	android:orientation="horizontal"
+        	android:layout_centerHorizontal="true"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/zakat_filter_TXT_title"
+        	android:layout_margin="5dp"
+        	android:checkedButton="@+id/zakat_filter_radio_name"
+        >
+        	<RadioButton 
+        		android:id="@+id/zakat_filter_radio_name"
+        		android:minWidth="100dp"
+        		android:layout_height="wrap_content"
+        		android:button="@null"
+        		android:gravity="center"
+        		android:text="Name"
+        		android:textColor="@color/radio_colors"
+        		android:textSize="18dp"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:background="@drawable/customised_filter_left_radiobutton"
+        	/>
+        	<RadioButton 
+        		android:id="@+id/zakat_filter_radio_distance"
+        		android:minWidth="100dp"
+        		android:layout_height="wrap_content"
+        		android:button="@null"
+        		android:gravity="center"
+        		android:text="Distance"
+        		android:textColor="@color/radio_colors"
+        		android:textSize="18dp"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:background="@drawable/customised_filter_right_radiobutton"
+        		/>
+        </RadioGroup>
+        
+        <TextView 
+        	android:id="@+id/zakat_filter_TXT"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/zakat_filter_radiogroup"
+        	android:text="Given to"
+        	android:padding="10dp"
+        	android:textColor="@color/black"
+        	android:textSize="18sp"
+        	android:textStyle="bold"
+        
+        />
+        
+        <Spinner 
+        	android:id="@+id/zakat_filter_SPN_country"
+        	android:layout_width="200dp"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/zakat_filter_TXT"
+        	android:layout_marginLeft="10dp"
+        	android:layout_alignLeft="@+id/zakat_filter_radiogroup"
+        />
+        
+    </RelativeLayout>
+</RelativeLayout>

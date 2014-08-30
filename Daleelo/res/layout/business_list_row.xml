@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/business_row_REL_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/business_row_BTN_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/btn_icon_delete"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/business_row_REL_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/business_row_REL_delete"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/business_row_TXT_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/business_row_TXT_distance"
+            android:ellipsize="end"
+            android:text="World Food Warehouse"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/business_row_TXT_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/business_row_TXT_name"
+            android:layout_below="@+id/business_row_TXT_name"
+            android:layout_toLeftOf="@+id/business_row_TXT_distance"
+            android:text="Test Address"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/business_row_IMG_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/business_row_TXT_address"
+            android:layout_below="@+id/business_row_TXT_address"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/icon_zero_star" />
+
+        <TextView
+            android:id="@+id/business_row_TXT_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/business_row_IMG_rate"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/business_row_IMG_rate"
+            android:text="3 Reviews"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/business_row_TXT_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1.0 mi"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/business_row_REL_more_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/business_row_REL_data"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/business_row_VIEW_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#000000"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/business_row_TXT_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business_row_VIEW_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="sample"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/business_row_BTN_view_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business_row_TXT_count"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_icon_view_more_list"
+            android:textColor="#ffffff"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/business_row_BTN_view_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/business_row_TXT_count"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_icon_next_pic"
+            android:textColor="#ffffff"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/business_row_BTN_view_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/business_row_TXT_count"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_icon_previous_pic"
+            android:textColor="#ffffff"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/masjid_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/masjid_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="Makka Masjid"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/masjid_IMGB_right"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/right_arrow" />
+
+            <ImageButton
+                android:id="@+id/masjid_IMGB_left"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/masjid_IMGB_right"
+                android:background="@drawable/left_arrow" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/masjid_REL_serach"
+            android:layout_below="@+id/masjid_REL_title" >
+
+            <RelativeLayout
+                android:id="@+id/give_REL_desc_one"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/give_REL_desc_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect" >
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_descriptionREL_desc_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toLeftOf="@+id/masjid_IMG_masjid"
+                            android:text="Makka masjid"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/masjid_TXT_name"
+                            android:layout_below="@+id/masjid_TXT_name"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toLeftOf="@+id/masjid_IMG_masjid"
+                            android:text="address"
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:id="@+id/masjid_TXT_phone_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/masjid_TXT_address"
+                            android:layout_below="@+id/masjid_TXT_address"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/icon_phone" />
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_TXT_address"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/masjid_TXT_phone_image"
+                            android:text="7396718033"
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:id="@+id/masjid_IMG_masjid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/mosque" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/give_REL_desc_call_btns"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/masjid_descriptionREL_desc_address"
+                        android:background="@drawable/bg_half_rect_black" >
+
+                        <Button
+                            android:id="@+id/masjid_IMGB_call"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/icon_call_btn" />
+
+                        <Button
+                            android:id="@+id/masjid_BTN_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/masjid_BTN_direction"
+                            android:background="@drawable/icon_map" />
+
+                        <Button
+                            android:id="@+id/masjid_BTN_direction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/masjid_BTN_share"
+                            android:background="@drawable/icon_direction" />
+
+                        <Button
+                            android:id="@+id/masjid_BTN_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/masjid_BTN_save"
+                            android:background="@drawable/icon_share" />
+
+                        <Button
+                            android:id="@+id/masjid_BTN_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/icon_save" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/give_REL_desc_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/give_REL_desc_address"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rect" >
+
+                    <LinearLayout
+                        android:id="@+id/give_REL_desc_basic"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="Basic Information"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/give_REL_desc_imam"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/masjid_TXT_title"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_imamtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Imam:"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_imam"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/masjid_TXT_imamtitle"
+                                    android:singleLine="true"
+                                    android:text="..."
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/give_REL_desc_demo"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/give_REL_desc_imam"
+                                android:layout_below="@+id/give_REL_desc_imam"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_demograghicslabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Demographics:"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_demographics"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/masjid_TXT_demograghicslabel"
+                                    android:singleLine="true"
+                                    android:text="..."
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/give_REL_desc_denomination"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/give_REL_desc_demo"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_denominationlabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Denomination:"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_denomination"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/masjid_TXT_denominationlabel"
+                                    android:singleLine="true"
+                                    android:text="..."
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/give_REL_desc_language"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/give_REL_desc_denomination"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_languagelabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Language Of Services:"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/masjid_TXT_language"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/masjid_TXT_languagelabel"
+                                    android:singleLine="true"
+                                    android:text="..."
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/seperator"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/give_REL_desc_basic"
+                        android:background="@android:color/black"
+                        android:padding="10dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/give_REL_desc_services"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seperator"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_servicestitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="Services Provided"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_service"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/masjid_TXT_servicestitle"
+                            android:layout_below="@+id/masjid_TXT_servicestitle"
+                            android:layout_marginTop="5dp"
+                            android:text="daleelo service provider is really good compare than other services,is it really true or something else"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/give_REL_desc_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/give_REL_desc_two"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rect" >
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_detilas_TXT_event1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/masjid_TXT_announcemnettitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="Events"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/masjid_IMG_cal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_TXT_announcemnettitle"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/icon_calendar" />
+
+                        <TextView
+                            android:id="@+id/masjid_detail_TXT_timeZoneTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_TXT_announcemnettitle"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/masjid_IMG_cal"
+                            android:text="Currently there are no events to display."
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/masjid_detail_TXT_timeZone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_detail_TXT_timeZoneTitle"
+                            android:layout_marginLeft="5dip"
+                            android:layout_toRightOf="@+id/masjid_IMG_cal"
+                            android:text=""
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:id="@+id/masjid_IMG_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_arrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/masjid_BTN_donate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/give_REL_desc_three"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/donatenow" />
+
+                <LinearLayout
+                    android:id="@+id/give_REL_desc_four"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/masjid_BTN_donate"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rect"
+                    android:paddingBottom="5dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_REL_prayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/masjid_BTN_prayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/prayer_time_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_BTN_prayer"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="Prayer Schedule"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_REL_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/masjid_BTN_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/photos_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_BTN_photo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="Photo"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_REL_website"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/masjid_BTN_website"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/website_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_BTN_website"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="Website"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_REL_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/masjid_BTN_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/email_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_BTN_email"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="Email"
+                            android:textColor="#000000"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/masjid_REL_moreinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/masjid_BTN_moreinfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/more_info_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/masjid_BTN_moreinfo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:text="More Info"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/masjid_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/business_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_home" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_home"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_mystuff"
+                android:background="@drawable/btn_icon_home"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_mystuff"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_icon_folder"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/give_desc_REL_share"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        layout="@layout/description_share_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

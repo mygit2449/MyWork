@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/my_classified_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/my_classified_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Classified"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/my_classified_BTN_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_settings" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_classified_REL_disclimer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_classified_REL_title"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/my_classified_TXT_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Bharath!"
+                android:textColor="#000000"
+                android:textSize="15dp" 
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/my_classified_REL_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/my_classified_TXT_user"
+                android:padding="5dp" >
+                
+                <Button
+                    android:id="@+id/my_classified_BTN_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/btn_icon_done_blue_small" 
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/my_classified_BTN_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/btn_icon_remove" />
+
+                <Button
+                    android:id="@+id/my_classified_BTN_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/my_classified_BTN_remove"
+                    android:layout_alignBottom="@+id/my_classified_BTN_remove"
+                    android:layout_toLeftOf="@+id/my_classified_BTN_remove"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_icon_edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_classified_REL_LIST_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/my_classified_REL_add_new"
+            android:layout_below="@+id/my_classified_REL_disclimer"
+            android:padding="10dp" >
+            
+            <TextView  android:id="@+id/my_classified_TXT_no_records"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Currently you don't have any postings."
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <ListView
+                android:id="@+id/my_classified_LIST_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect"
+                android:scrollingCache="false" 
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_classified_REL_add_new"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/my_classified_BTN_classifieds"
+            android:gravity="center_vertical" 
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/img_icon_plus"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="Add New Post"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/my_classified_BTN_classifieds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/btn_icon_back_to_classified" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/business_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/business_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Local Deals"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/business_BTN_current_location"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/mainhome_IMG_logo"
+                android:layout_below="@+id/business_TXT_main_title"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_location"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:text="Fetching Location" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/business_REL_done_map"
+                android:background="@drawable/btn_icon_filter" />
+
+            <RelativeLayout
+                android:id="@+id/business_REL_done_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageButton
+                    android:id="@+id/business_IMGB_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_location_search" />
+
+                <ImageButton
+                    android:id="@+id/business_IMGB_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_icon_done_blue" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/business_features_REL_no_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business_REL_title"
+            android:background="@drawable/business_manasik"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/business_features_REL_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business_REL_title"
+            android:background="@drawable/bg_featured_small"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/business_features_TXT_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Featured Item"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/business_features_TXT_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/business_features_TXT_name"
+                android:layout_below="@+id/business_features_TXT_name"
+                android:layout_marginRight="15dp"
+                android:text="Address"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/business_features_IMG_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/business_features_TXT_address"
+                android:layout_below="@+id/business_features_TXT_address"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/icon_phone" />
+
+            <TextView
+                android:id="@+id/business_features_TXT_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/business_features_TXT_address"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/business_features_IMG_phone"
+                android:text="7396718033"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/business_featured_seperator_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/business_features_REL_data"
+            android:background="#000000" />
+
+        <ListView
+            android:id="@+id/business_LIST_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/business_REL_serach"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/business_featured_seperator_view"
+            android:divider="#000000"
+            android:dividerHeight="1dp"
+            android:scrollingCache="false" />
+
+        <RelativeLayout
+            android:id="@+id/business_REL_no_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_rect"
+            android:padding="6dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/business_TXT_no_data_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="No records found."
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/business_TXT_no_data_msg_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/business_TXT_no_data_msg"
+                android:layout_centerHorizontal="true"
+                android:text="Click Advertise to post your business"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_post_ads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/business_TXT_no_data_msg_two"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/advertise" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/business_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/business_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_home" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_home"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_mystuff"
+                android:background="@drawable/btn_icon_home"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_mystuff"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_icon_folder"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

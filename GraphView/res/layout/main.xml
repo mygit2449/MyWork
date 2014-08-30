@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+    <Button
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"/>
+ 
+    <Button
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"/>
+ 
+     <Button
+        android:id="@+id/circum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Circumference"/>
+ 
+</LinearLayout>

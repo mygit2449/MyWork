@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dip"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/Masjid_filter_REL_top"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <Button
+                android:id="@+id/Masjid_filter_BTN_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/btn_icon_done_blue" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Masjid Filter Settings"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/Masjid_filter_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Masjid_filter_REL_top" >
+
+            <RelativeLayout
+                android:id="@+id/Masjid_filter_REL_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/Masjid_filter_TXT_filterTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dip"
+                    android:layout_marginTop="20dip"
+                    android:text="Sort listing by"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+
+                <RadioGroup
+                    android:id="@+id/masjid_filter_RBG_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Masjid_filter_TXT_filterTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:checkedButton="@+id/masjid_filter_RB_Distance"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/masjid_filter_RB_Name"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/customised_filter_left_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:text="Name"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/radio_colors"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/masjid_filter_RB_Distance"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/customised_filter_right_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:text="Distance"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/radio_colors"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/Masjid_filter_REL_LocationAndDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/masjid_filter_RBG_text"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/rounded_rectangle" >
+
+                    <RelativeLayout
+                        android:id="@+id/Masjid_filter_REL_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/Masjid_filter_TXT_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dip"
+                            android:text="Location"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/Masjid_filter_ET_location"
+                            android:layout_width="180dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/bg_edit"
+                            android:hint="Change Location"
+                            android:paddingLeft="10dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/Masjid_filter_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@+id/Masjid_filter_REL_location"
+                        android:layout_marginTop="10dip"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/Masjid_filter_REL_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Masjid_filter_view"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:paddingBottom="20dip" >
+
+                        <TextView
+                            android:id="@+id/Masjid_filter_TXT_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="Distance"
+                            android:textColor="@android:color/black" />
+
+                        <SeekBar
+                            android:id="@+id/Masjid_filter_Seekbar_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_toRightOf="@+id/Masjid_filter_TXT_distance"
+                            android:max="100"
+                            android:maxHeight="12dip"
+                            android:paddingLeft="15dip"
+                            android:progress="0"
+                            android:thumb="@drawable/seekbar_thumb" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/tripplanner_addcotacts_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+
+            <ImageButton
+                android:id="@+id/tripplanner_addcontact_done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"              
+                android:background="@drawable/btn_icon_done_blue"
+                 />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Contacts" 
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/tripplanner_addfrom_contacts_LIST_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/tripplanner_addcotacts_title"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

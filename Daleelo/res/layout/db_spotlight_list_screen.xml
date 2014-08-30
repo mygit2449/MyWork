@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/spotlight_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/spotlight_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Local Spotlights"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/spotlight_IMGB_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_location_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spotlight_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/business_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_home" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_home"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_mystuff"
+                android:background="@drawable/btn_icon_home"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_mystuff"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_icon_folder"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/spotlight_LIN_top_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spotlight_REL_title" >
+
+            <Button
+                android:id="@+id/spotlight_BTN_local"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_blue_strip"
+                android:gravity="center"
+                android:text="Local"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spotlight_BTN_national"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_light_strip"
+                android:gravity="center"
+                android:text="National"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/spotlight_LIST_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/btn_post_ads"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spotlight_LIN_top_buttons"
+            android:scrollingCache="false" />
+
+        <Button
+            android:id="@+id/btn_post_ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/spotlight_REL_serach"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/icon_reserve_spotlight" />
+    </RelativeLayout>
+
+</RelativeLayout>

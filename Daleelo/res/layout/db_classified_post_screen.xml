@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/classified_post_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:padding="3dp" >
+
+            <TextView
+                android:id="@+id/classified_post_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="Post to Classified"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/classified_post_REL_title" >
+
+            <RelativeLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="fill_horizontal"
+                        android:text="Please fill out the following infromation about your posting. Infromation with a red asterisk(*) next to it are mandatory. Post will not be verified unless all mandatory information is entered correctly. Thank you."
+                        android:textColor="#000000"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout2"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout2"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical"
+                            android:padding="8dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Section"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/classified_post_SPIN_section"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView3" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout3"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical"
+                            android:padding="8dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Category"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/classified_post_SPIN_category"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView3" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout4"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical"
+                            android:padding="8dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Location"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/classified_post_ET_loction"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView3"
+                                android:hint="enter location"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="13dp" >
+                            </EditText>
+                        </RelativeLayout>
+
+                            <RelativeLayout
+                            android:id="@+id/relativeLayout7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout5"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical"
+                            android:padding="8dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Zip Code"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/classified_post_ET_zipcaode"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView3"
+                                android:hint="enter ZipCode"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="13dp" >
+                            </EditText>
+                        </RelativeLayout>
+                            
+                            
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout7"
+                            android:gravity="center_vertical"
+                            android:padding="8dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text=" "
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Type"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" 
+                                android:layout_marginTop="10dp"/>
+
+                            <RadioGroup
+                                android:id="@+id/classified_post_RG_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textView3" >
+
+                                <RadioButton
+                                    android:id="@+id/classified_post_RB_local"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="Local"
+                                    android:textColor="#000000" />
+
+                                <RadioButton
+                                    android:id="@+id/classified_post_RB_national"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="National"
+                                    android:textColor="#000000"
+                                    />
+                            </RadioGroup>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/classified_post_BTN_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_icon_continue" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dip"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/masjidlist_REL_top"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/masjidlist_BTN_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/icon_location_search" />
+
+            <TextView
+                android:id="@+id/masjidlist_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/masjidlist_BTN_map"
+                android:text="Masjid"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/masjidlist_BTN_current_location"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/masjidlist_TXT_main_title"
+                android:layout_below="@+id/masjidlist_TXT_main_title"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_location"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:text="Fetching Location" />
+
+            <Button
+                android:id="@+id/masjidlist_BTN_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/btn_icon_filter"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/masjidList_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/masjidList_REL_serach"
+            android:layout_below="@+id/masjidlist_REL_top"
+            android:scrollingCache="false" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/masjidList_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/business_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_home" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_home"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_mystuff"
+                android:background="@drawable/btn_icon_home"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_mystuff"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_icon_folder"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

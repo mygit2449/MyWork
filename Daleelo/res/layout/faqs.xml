@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/faqs_REL_Home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/faqs_REL_fix"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/faqs_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/faqs_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Frequently Asked Questions"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/faqs_ExpandableListview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/faqs_REL_header"
+            android:divider="#00000000"
+            android:groupIndicator="@android:color/transparent"
+            android:scrollingCache="false" >
+        </ExpandableListView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#777777"
+    android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:id="@+id/email_listview_Rel_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+           <ImageView
+                android:id="@+id/grouplistview_text_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dip"
+                android:paddingBottom="2dp"
+                android:paddingRight="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/text_black_icon"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/emaillistrow_txt_partofemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/email_listview_Rel_img"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip"
+            android:singleLine="true"
+            android:text="subject" />
+
+        <TextView
+            android:id="@+id/emaillistrow_txt_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emaillistrow_txt_partofemail"
+            android:layout_toRightOf="@+id/email_listview_Rel_img"
+            android:paddingLeft="10dip"
+            android:paddingTop="5dip"
+            android:text="sender" />
+
+        <TextView
+            android:id="@+id/emaillistrow_txt_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingTop="5dip"
+            android:text="dateTime" />
+
+        <CheckBox
+            android:id="@+id/emaillistrow_chk_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/emaillistrow_txt_datetime"
+            android:checked="false"
+            android:focusable="false" />
+
+        <ImageView
+            android:id="@+id/emaillistrow_icon_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/emaillistrow_chk_check"
+            android:layout_below="@+id/emaillistrow_txt_datetime"
+            android:layout_toLeftOf="@+id/emaillistrow_chk_check" />
+
+
+</RelativeLayout>

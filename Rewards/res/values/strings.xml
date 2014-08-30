@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, RewardsActivity!</string>
+    <string name="app_name">Rewards</string>
+	<string name="nocards">You have no cards added yet.</string>
+	<string name="title">Title Here</string>
+</resources>

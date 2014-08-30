@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#777777"
+	android:paddingRight="10dp"
+	android:paddingLeft="10dp"
+	android:paddingBottom="5dp">
+  <RelativeLayout 
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:paddingTop="10dp">
+	<ImageView 
+		android:id="@+id/grouplistrow_img_icon"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_marginTop="10dp"
+		android:src="@drawable/yellow_box"
+		android:scaleType="fitXY"
+		android:paddingBottom="2dp"
+		android:paddingRight="2dp"
+		/>
+		
+	<TextView 
+		android:id="@+id/grouplistrow_txt_serialnumber"
+		android:layout_below="@+id/grouplistrow_img_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<TextView 
+		android:id="@+id/grouplistrow_txt_partofmessage"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/grouplistrow_img_icon"
+		android:layout_alignBottom="@+id/grouplistrow_img_icon"
+		android:layout_marginLeft="5dp"
+		android:textColor="#000000"/>
+		<TextView 
+		android:id="@+id/grouplistrow_txt_sender"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/grouplistrow_img_icon"
+		android:layout_below="@+id/grouplistrow_txt_partofmessage"
+		android:layout_alignBottom="@+id/grouplistrow_txt_serialnumber"
+		android:layout_marginLeft="5dp"
+		android:textColor="#000000"/>
+		</RelativeLayout>
+		
+	<TextView 
+		android:id="@+id/grouplistrow_txt_datetime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:textColor="#000000"
+		android:layout_alignBottom="@+id/grouplistrow_txt_partofmessage"
+		/>
+		
+	<CheckBox 
+		android:id="@+id/grouplistrow_chk_check"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:checked="false"
+		android:layout_below="@+id/grouplistrow_txt_datetime"
+		android:layout_alignParentRight="true"
+		android:focusable="false"
+		
+		/>
+		<ImageView 
+		android:id="@+id/grouplistrow_icon_indicator"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_below="@+id/grouplistrow_txt_datetime"
+		android:layout_toLeftOf="@+id/grouplistrow_chk_check"
+		android:layout_alignBottom="@+id/grouplistrow_chk_check"
+
+		/>
+	
+	</RelativeLayout>

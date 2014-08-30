@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="5dip"
+    android:paddingBottom="5dip"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/textlistrow_txt_serialnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="16dip" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/textlistrow_icon_indicator"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@id/textlistrow_txt_serialnumber"
+        android:layout_below="@id/textlistrow_txt_serialnumber"
+        android:paddingBottom="3dip"
+        android:paddingTop="2dip"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/textlistrow_txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#000000" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textlistrow_txt_partofmessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textlistrow_txt_serialnumber"
+        android:layout_toLeftOf="@+id/textlistrow_txt_date"
+        android:layout_toRightOf="@id/textlistrow_icon_indicator"
+        android:ellipsize="end"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="16dip" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textlistrow_txt_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textlistrow_icon_indicator"
+        android:layout_below="@id/textlistrow_txt_partofmessage"
+        android:layout_toRightOf="@id/textlistrow_icon_indicator"
+        android:paddingBottom="3dip"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dip"
+        android:textColor="#000000" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textlistrow_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textlistrow_txt_sender"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/textlistrow_txt_date"
+        android:paddingTop="5dip"
+        android:textColor="#000000" >
+    </TextView>
+
+    
+</RelativeLayout>

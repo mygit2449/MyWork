@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/home_advertisement_REL_fix"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/home_advertisement_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageView
+                android:id="@+id/home_advertisement_screen_Img_Logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo_d" />
+
+            <ImageView
+                android:id="@+id/home_advertisement_screen_Img_Logo_dummy"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/logo_d"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/home_advertisement_screen_TXT_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/home_advertisement_screen_Img_Logo"
+                android:layout_toRightOf="@+id/home_advertisement_screen_Img_Logo_dummy"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/ads_websiteAddress"
+                android:textColor="@android:color/white"
+                android:textSize="13dip" />
+
+            <TextView
+                android:id="@+id/home_advertisement_screen_TXT_PhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_advertisement_screen_TXT_Address"
+                android:layout_toLeftOf="@+id/home_advertisement_screen_Img_Logo"
+                android:layout_toRightOf="@+id/home_advertisement_screen_Img_Logo_dummy"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/ads_phoneNumber"
+                android:textColor="@android:color/white"
+                android:textSize="13dip" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/home_advertisement_Scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_advertisement_REL_header"
+            android:layout_centerHorizontal="true" >
+
+            <RelativeLayout
+                android:id="@+id/home_advertisement_screen_REL_BusinessInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/home_advertisement_screen_TXT_Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="Business Category:"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_BusinessName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_screen_TXT_Title"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_BusinessName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Business Name:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_BusinessName"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_BusinessPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_BusinessName"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_BusinessPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Business Phone:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_BusinessPhone"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_BusinessFax"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_BusinessPhone"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_BusinessFax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dp"
+                        android:text="Fax:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_BusinessFax"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_BusinessEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_BusinessFax"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_BusinessEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Email:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_BusinessEmail"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_BusinessAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_BusinessEmail"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_BusinessAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:paddingRight="6dp"
+                        android:text="Business Address:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_BusinessAddress"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_State"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_BusinessAddress"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_State"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="State:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <Spinner
+                        android:id="@+id/home_advertisement_Spiner_State"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dip"
+                        android:background="@drawable/sub_category_et"
+                        android:padding="5dip"
+                        android:prompt="@string/state_selector" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_City"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_State"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_City"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="City:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <Spinner
+                        android:id="@+id/home_advertisement_Spiner_City"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dip"
+                        android:background="@drawable/sub_category_et"
+                        android:padding="5dip"
+                        android:prompt="@string/city_selector" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_Zipcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_City"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_Zipcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Zip Code:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_Zipcode"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_Category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_Zipcode"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Category:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <Spinner
+                        android:id="@+id/home_advertisement_Spiner_Category"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dip"
+                        android:background="@drawable/sub_category_et"
+                        android:padding="5dip"
+                        android:prompt="@string/category_selector" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_SubCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_Category"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_SubCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Sub Category:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <Spinner
+                        android:id="@+id/home_advertisement_Spiner_SubCategory"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dip"
+                        android:background="@drawable/sub_category_et"
+                        android:contentDescription="No Catagories"
+                        android:padding="5dip"
+                        android:prompt="@string/subcategory_selector" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/home_advertisement_screen_TXT_AdLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_SubCategory"
+                    android:padding="5dip"
+                    android:text="Ad Location:"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_LL_AdLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_screen_TXT_AdLocation"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dip" >
+
+                    <ImageView
+                        android:id="@+id/home_advertisement_IMG_Featured"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/questionmark_icon" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_Featured"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/home_advertisement_IMG_Featured"
+                        android:duplicateParentState="true"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Featured"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/home_advertisement_IMG_Top4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/home_advertisement_screen_TXT_Featured"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/questionmark_icon" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_Top4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/home_advertisement_IMG_Top4"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Top 4"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_advertisement_LL_AdLocation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_LL_AdLocation"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/home_advertisement_IMG_Top9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/questionmark_icon" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_Top9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="Top 9"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/home_advertisement_IMG_GeneralListing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/questionmark_icon" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_GeneralListing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="GeneralListing"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_LL_AdLocation2"
+                    android:layout_marginLeft="140dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_National"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:text="National"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_Local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/home_advertisement_screen_TXT_National"
+                        android:paddingTop="10dp"
+                        android:text="Local"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_advertisement_screen_LL_ChoosePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_location" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_screen_TXT_Chooseprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_advertisement_REL_location"
+                        android:paddingLeft="5dip"
+                        android:paddingTop="10dp"
+                        android:text="Choose Price"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/business_filter_RBG_choosecost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_location"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/home_advertisement_screen_LL_ChoosePrice"
+                    android:checkedButton="@+id/business_filter_RB_Local"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/business_filter_RB_Local"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/customised_filter_left_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/radio_colors"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/business_filter_RB_National"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/customised_filter_right_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/radio_colors"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/home_advertisement_screen_TXT_advTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_filter_RBG_choosecost"
+                    android:paddingLeft="5dip"
+                    android:paddingTop="10dp"
+                    android:text="@string/adds_spotlight"
+                    android:textColor="#0000FF" />
+
+                <TextView
+                    android:id="@+id/home_advertisement_screen_TXT_PaymentOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_screen_TXT_advTxt"
+                    android:padding="5dip"
+                    android:text="Payment Options:"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_Numberofpayments"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_screen_TXT_PaymentOptions"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_Numberofpayments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Number of payments:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <Spinner
+                        android:id="@+id/home_advertisement_Spiner_Numberofpayments"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/sub_category_et"
+                        android:padding="5dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_CCType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_Numberofpayments"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_CCType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="CC Type:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_CCType"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_Cardholdername"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_CCType"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_Cardholdername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Cardholder Name:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_Cardholdername"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_CCNumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_Cardholdername"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_CCNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="CC Number:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_CCNumber"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:paddingLeft="3dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_ExpDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_CCNumber"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_ExpDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="Exp Date:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_ExpDate"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dip" />
+                    <!--
+                         <TextView
+                        android:id="@+id/home_advertisement_ETXT_ExpDate"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:gravity="center_vertical"
+                        android:editable="false"
+                        android:cursorVisible="false"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                    -->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_CVV2Code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_ExpDate"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_CVV2Code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dip"
+                        android:layout_marginTop="5dip"
+                        android:text="CVV2 Code:"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dip" />
+
+                    <EditText
+                        android:id="@+id/home_advertisement_ETXT_CVV2Code"
+                        android:layout_width="160dp"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_advertisement_REL_agreeTermsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_CVV2Code"
+                    android:layout_marginTop="10dip" >
+
+                    <CheckBox
+                        android:id="@+id/home_advertisement_CheckBox_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="2dip"
+                        android:button="@drawable/customised_chkbx"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_TXT_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/home_advertisement_CheckBox_agree"
+                        android:text="I agree the"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/home_advertisement_termsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/home_advertisement_TXT_agree"
+                        android:text="Terms and Conditions"
+                        android:textColor="#0000ff"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/home_advertisement_BTN_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_advertisement_REL_agreeTermsAndConditions"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_icon_submit_long" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

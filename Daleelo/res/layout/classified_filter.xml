@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dip"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/classified_filter_REL_top"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <Button
+                android:id="@+id/classified_filter_BTN_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/btn_icon_done_blue" />
+
+            <TextView
+                android:id="@+id/classified_filter_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=" Filter Settings"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/classified_filter_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/classified_filter_REL_top" >
+
+            <RelativeLayout
+                android:id="@+id/classified_filter_REL_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/classified_filter_TXT_sort_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dip"
+                    android:layout_marginTop="20dip"
+                    android:text="Sort For Rent by"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+
+                <Spinner
+                    android:id="@+id/classified_filter_SPIN_sort"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/classified_filter_TXT_sort_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <LinearLayout
+                    android:id="@+id/classified_filter_REL_LocationAndDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/classified_filter_SPIN_sort"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/rounded_rectangle"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/classified_filter_REL_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/classified_filter_TXT_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dip"
+                            android:text="Display"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/classified_filter_RBG_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:checkedButton="@+id/classified_filter_RB_Name"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/classified_filter_RB_Name"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customised_filter_left_radiobutton"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:minWidth="50dp"
+                                android:text="Local"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/radio_colors"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:id="@+id/classified_filter_RB_Distance"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customised_filter_right_radiobutton"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:minWidth="50dp"
+                                android:text="National"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/radio_colors"
+                                android:textSize="16dp" />
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/classified_filter_REL_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dip" >
+
+                        <View
+                            android:id="@+id/classified_filter_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/classified_filter_TXT_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:text="Distance "
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/classified_filter_Seekbar_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toRightOf="@+id/classified_filter_TXT_distance"
+                            android:max="100"
+                            android:maxHeight="12dip"
+                            android:paddingLeft="15dip"
+                            android:progress="0"
+                            android:paddingRight="15dp"
+                            android:thumb="@drawable/seekbar_thumb" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/classified_filter_REL_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:id="@+id/classified_filter_TXT_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="15dip"
+                            android:text="Category"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:background="@android:color/black" />
+
+                        <Spinner
+                            android:id="@+id/classified_filter_SPIN_category"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/classified_filter_TXT_category" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/classified_filter_REL_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp" >
+
+                        <TextView
+                            android:id="@+id/classified_filter_TXT_location"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="15dip"
+                            android:text="Price Range"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/classified_filter_ET_price_from"
+                            android:layout_width="60dip"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_toRightOf="@+id/classified_filter_TXT_location"
+                            android:background="@drawable/bg_edit_small"
+                            android:paddingLeft="8dip"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textSize="14dip" 
+                            android:inputType="number"/>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_below="@+id/classified_filter_REL_location"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_toRightOf="@+id/classified_filter_ET_price_from"
+                            android:text="to"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/classified_filter_ET_price_to"
+                            android:layout_width="60dip"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_toRightOf="@+id/textView2"
+                            android:background="@drawable/bg_edit_small"
+                            android:paddingLeft="8dip"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textSize="14dip" 
+                            android:inputType="number"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

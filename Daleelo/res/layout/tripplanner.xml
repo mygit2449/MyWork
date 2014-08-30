@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_filter" >
+
+    <RelativeLayout
+        android:id="@+id/tripplanner_heading_layout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tripplanner_navigatebar" >
+
+        <Button
+            android:id="@+id/tripplanner_navigate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tripplanner_navigatebtn" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tripplanner_navigate_btn"
+            android:layout_alignBottom="@+id/tripplanner_navigate_btn"
+            android:layout_centerHorizontal="true"
+            android:text="TripPlanner"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/tripplanner_scrollView"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tripplanner_heading_layout" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/tripplanner_startpoint_label"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Start Point"
+                    android:textColor="@android:color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tripplanner_startpoint_eText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/tripplanner_startpoint_label"
+                    android:background="@drawable/bg_edit"
+                    android:gravity="center_vertical"
+                    android:hint="Current Location"
+                    android:inputType="textCapWords"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:background="#CCCACF" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/tripplanner_endpoint_label"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="End Point"
+                    android:textColor="@android:color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tripplanner_endpoint_eText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/tripplanner_endpoint_label"
+                    android:background="@drawable/bg_edit"
+                    android:gravity="center_vertical"
+                    android:hint="Chicago,IL"
+                    android:inputType="textCapWords"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:background="#CCCACF" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/tripplanner_points_tView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Points of Interest"
+                    android:textColor="@android:color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tripplanner_points_tView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tripplanner_points_tView"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Distance Away from Route"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_all_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="All"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/all_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tripplanner_all_chBox"                    
+                    android:maxHeight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp" 
+                    android:layout_marginLeft="5dp"                  
+                    android:thumb="@drawable/default_thumb"
+                    android:max="15"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_gasStation_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="Gas Station"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/gasstation_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:maxHeight="15dip"
+                    android:layout_toRightOf="@+id/tripplanner_gasStation_chBox"
+                    android:max="15"                    
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"  
+                    android:thumb="@drawable/gasstation" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_Grocery_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="Grocery"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/grocery_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+      				android:maxHeight="15dip"
+                    android:layout_toRightOf="@+id/tripplanner_Grocery_chBox"
+                    android:max="15"                   
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"  
+                    android:thumb="@drawable/grocery" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_masjid_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="Masajid/Musallah"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/masjid_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tripplanner_masjid_chBox"
+                    android:max="15"
+                    android:maxHeight="15dp"                    
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"  
+                    android:thumb="@drawable/masjid" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_Rest_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="Rest Areas"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/restareas_seekbar"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tripplanner_Rest_chBox"
+                    android:max="15"
+                    android:maxHeight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"  
+                    android:thumb="@drawable/restareas" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/tripplanner_Restaurant_chBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:button="@drawable/customised_filter_checkbox"
+                    android:text="Restaurant"
+                    android:textColor="#4E4848"
+                    android:textSize="14dp"
+                    android:textStyle="italic" />
+
+                <SeekBar
+                    android:id="@+id/restaurant_seekbar"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tripplanner_Restaurant_chBox"
+                    android:max="15"
+                    android:maxHeight="15dp"
+					android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"  
+                    android:thumb="@drawable/restaurant" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tripplanner_addyourOwn_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp" >
+
+                <View
+                    android:id="@+id/addyourOwn_View_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tripplanner_points_tView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/addyourOwn_View_one"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Import Your Own List"
+                    android:textColor="@android:color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tripplanner_points_tView"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

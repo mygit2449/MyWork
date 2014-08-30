@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp" >
+
+    <ImageView
+        android:id="@+id/deal_icon_row_IMG_data"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_more_business" />
+
+    <TextView
+        android:id="@+id/deal_icon_row_TXT_name"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="All" 
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

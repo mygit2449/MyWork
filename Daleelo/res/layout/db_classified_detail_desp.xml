@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/dashboard_class_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/dashboard_class_TXT_main_title"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="classified Name"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/dashboard_class_IMGB_right"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/right_arrow"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/dashboard_class_IMGB_left"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/dashboard_class_IMGB_right"
+                android:background="@drawable/left_arrow"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dashboard_class_REL_serach"
+            android:layout_below="@+id/dashboard_class_REL_title" >
+
+            <RelativeLayout
+                android:id="@+id/dashboard_class_REL_desp_one"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/dashboard_class_REL_desp_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rect" >
+
+                    <RelativeLayout
+                        android:id="@+id/dashboard_class_REL_desp_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingBottom="5dp" >
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_desp_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="TextView"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_desp_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/dashboard_class_TXT_desp_name"
+                            android:layout_below="@+id/dashboard_class_TXT_desp_name"
+                            android:layout_marginTop="3dp"
+                            android:text="TextView"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_posted_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/dashboard_class_TXT_desp_address"
+                            android:layout_below="@+id/dashboard_class_TXT_desp_address"
+                            android:layout_marginTop="3dp"
+                            android:text="TextView"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/dashboard_class_TXT_desp_name"
+                            android:layout_alignBottom="@+id/dashboard_class_TXT_desp_name"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:text="$ 0.0"
+                            android:textColor="#ff0000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dashboard_class_REL_desp_call_btns"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/dashboard_class_REL_desp_address"
+                        android:background="@drawable/bg_half_rect_black"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/dashboard_class_IMG_desp_phone_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/icon_phone" />
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_desp_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toRightOf="@+id/dashboard_class_IMG_desp_phone_image"
+                            android:text="7396718033"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            android:id="@+id/dashboard_class_BTN_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/dashboard_class_BTN_save"
+                            android:background="@drawable/icon_share" />
+
+                        <ImageView
+                            android:id="@+id/dashboard_class_BTN_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/icon_save" />
+
+                        <ImageView
+                            android:id="@+id/dashboard_class_IMG_desp_email_image"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/dashboard_class_IMG_desp_phone_image"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/icon_mail" />
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/dashboard_class_IMG_desp_email_image"
+                            android:layout_below="@+id/dashboard_class_IMG_desp_phone_image"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/dashboard_class_IMG_desp_email_image"
+                            android:text="TextView" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dashboard_class_REL_desp_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/dashboard_class_REL_desp_address"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rect"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/dashboard_class_REL_desp_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/dashboard_class_TXT_desp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:text="Detail content of the classified"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dashboard_class_REL_desp_images"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/dashboard_class_REL_desp_two"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rect"
+                    android:padding="5dp"
+                    android:visibility="invisible" >
+
+                    <HorizontalScrollView
+                        android:id="@+id/dashboard_class_HSV_images"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toLeftOf="@+id/dashboard_class_IMGB_right_arrow"
+                        android:layout_toRightOf="@+id/dashboard_class_IMGB_left_arrow"
+                        android:background="#00000000"
+                        android:fadeScrollbars="false" >
+
+                        <LinearLayout
+                            android:id="@+id/dashboard_class_LL_images"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <ImageButton
+                        android:id="@+id/dashboard_class_IMGB_left_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000"
+                        android:src="@drawable/arrow_left"
+                        android:visibility="invisible" />
+
+                    <ImageButton
+                        android:id="@+id/dashboard_class_IMGB_right_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000"
+                        android:src="@drawable/arrow"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/dashboard_class_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_black_strip"
+            android:gravity="center"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/business_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_home" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_home"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/business_IMGB_mystuff"
+                android:background="@drawable/btn_icon_home"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/business_IMGB_mystuff"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_icon_folder"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/give_desc_REL_share"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        layout="@layout/description_share_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

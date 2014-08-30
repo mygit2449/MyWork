@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/classified_post_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:padding="3dp" >
+
+            <TextView
+                android:id="@+id/classified_post_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="Post to Classified"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/classified_post_REL_title" >
+
+            <RelativeLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout2"
+                        android:layout_centerHorizontal="true" >
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="fill_horizontal"
+                                android:text="Please fill out the following infromation about your posting. Infromation with a red asterisk(*) next to it are mandatory. Post will not be verified unless all mandatory information is entered correctly. Thank you."
+                                android:textColor="#000000"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout2"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Title"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/classified_post_ET_title"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView3"
+                                android:background="@drawable/rounded_rect_small"
+                                android:hint="enter post title"
+                                android:inputType="textCapSentences"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="13dp" >
+                            </EditText>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout5"
+                            android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Description"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/classified_post_ET_desp"
+                                android:layout_width="fill_parent"
+                                android:layout_height="80dp"
+                                android:layout_below="@+id/textView3"
+                                android:layout_marginTop="10dp"
+                                android:background="#ffffff"
+                                android:gravity="top"
+                                android:hint="enter description"
+                                android:inputType="textCapSentences"
+                                android:padding="5dp"
+                                android:textColor="#000000"
+                                android:textSize="13dp" >
+                            </EditText>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout6"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Upload Picture(s)"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/classified_post_BTN_browse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/btn_icon_browse" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/horizontalScrollView1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/classified_post_BTN_browse"
+                                android:layout_marginTop="10dp" >
+
+                                <LinearLayout
+                                    android:id="@+id/classified_post_LL_picture"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relativeLayout7"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textColor="#ff0000" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:text="Price"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/classified_post_ET_price"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/textView3"
+                                android:background="@drawable/rounded_rect_small"
+                                android:hint="enter price"
+                                android:inputType="number"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="13dp" >
+                            </EditText>
+                        </RelativeLayout>
+
+                        <CheckBox
+                            android:id="@+id/classified_post_CB_obo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@+id/relativeLayout8"
+                            android:button="@drawable/customised_filter_checkbox"
+                            android:paddingLeft="30dp"
+                            android:singleLine="true"
+                            android:text="Or Best Offer"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/classified_post_BTN_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_icon_done_black" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

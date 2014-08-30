@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, DaleeloActivity!</string>
+    <string name="app_name">Daleelo</string>
+    <string name="ads_websiteAddress">www.daleelo.com / sales@daleelo.com</string>
+    <string name="ads_phoneNumber">Ph: 1-800-699-2712</string>
+    <string name="zakat_calculator_gold">2. Gold &amp; Silver</string>
+    <string name="zakat_calculator_receivables">3. Receivables &amp; Loans</string>
+    <string name="zakat_calculator_stocks">4. Stocks &amp; Investments</string>
+    <string name="zakat_calculator_businesscash">5. Business Cash &amp; Inventories</string>
+    <string name="mapkey">0bxTUnNik-h9JndnEAGfc-D6aQbHW0sMdcNiovg</string>
+    <string name="learn_txt"><b>
+            <font color="#3BB9FF">Zakat:</font>
+        </b> The third pillar of Islam. It is mandatory when two conditions are met, which are “Nisab” and “Due Date”\n\n<b>
+            <font color="#3BB9FF">Nisab:</font>
+        </b> Nisab is a minimum amount of wealth you must own in order to be liable to pay Zakat. It is the price of 3 oz. (85 Grams) of pure gold, on the day in which Zakat is to be paid. (Current Gold Price) – link to this http://www.goldprice.org/ \n\n<b>
+            <font color="#3BB9FF">Due Date:</font>
+        </b> Zakat is due after a time span of one lunar year (Hijri) passes while you own the Nisab, and if you always possess the minimum Nisab value, then Zakat is due once every year at a date of your choosing.\n\nThe 8 Recipients of Zakat\n\nFrom the Qur’anic verse ordaining zakat, eight classes of recipients have been identified \n\n \"Alms are for the poor and the needy, and those employed to administer the (funds); for those whose hearts have been (recently) reconciled (to the truth); for those in bondage and in debt; in the cause of God; and for the wayfarer: (thus is it) ordained by God, and God is full of knowledge and wisdom.\"</string>
+    <string name="fuqaraa">Translated as the ‘poor’ or ‘needy’, these people have some money, but not sufficient for their everyday needs. The elderly are often amongst the ‘fuqaraa’. The Prophet Muhammad said “He is not one of us who does not show tenderness to the young and who does not show respect to the elder.” (At-Tirmidhi). It is a sad fact that the elderly tend to be neglected in today’s society. According to recent research, older people are among the most excluded and materially worse off.</string>
+    <string name="Masakeen">Translated as ‘the destitute’, these are people who do not have anything, and who are in need of asking others for food, clothing and shelter</string>
+    <string name="Ameleena_Alayha">These are the alms collectors, people who are employed to collect zakat. The authority gives them a fee for their work, which includes collecting, recording, guarding, dividing and distributing zakat.</string>
+    <string name="MuAllafa_Qolobohom">Translated as ‘those who have inclined towards Islam’. Zakat can be used to attract the hearts of those who have inclined towards Islam. It includes those who have just become Muslim, or those whose circumstances are so desperate they fear turning to crime if they are not helped</string>
+    <string name="Riqab">This means ‘in the path of Allah’ and pertains to anyone struggling for a righteous cause, including expenditure towards the promotion of Islam and charitable purposes</string>
+    <string name="Gharimeen">These are the people burdened by debts because of personal needs or social necessity. These people should be given zakat if they do not have enough money beyond their basic needs to repay debts</string>
+    <string name="Fi_sabi_Lillah">This means ‘in the path of Allah’ and pertains to anyone struggling for a righteous cause, including expenditure towards the promotion of Islam and charitable purposes</string>
+    <string name="lbn_as_Sabil">Traditionally, the wayfarers are travelers stranded in a foreign land in need of money. These people can receive zakat, if the purpose for travelling is lawful. Wayfarers can today be interpreted as refugees or displaced people</string>
+    <string name="adds_spotlight">For Spotlight, Deals and Events please call 1-800-699-2712 or visit our website www.daleelo.com</string>
+    <string name="state_selector">States list</string>
+    <string name="city_selector">Cities list</string>
+    <string name="category_selector">Categories list</string>
+    <string name="subcategory_selector">Sub categories list</string>
+    <string name="caluculationmethods_selector">Calculation methods</string>
+    <string name="adhan_selector">Select Adhan</string>
+    <string name="reminder_selector">Reminder times</string>
+
+    <!-- frequently asked questions in more -->
+    <string name="question1">How do I use My Stuff?</string>
+    <string name="question2">How do I change my Location and Set Radius?</string>
+    <string name="question3">What are Spotlights and Deals?</string>
+    <string name="question4">How do I Filter lists?</string>
+    <string name="question5">What is the difference between green dots or bars and dark gray dots or bars on the Events Calendar?</string>
+    <string name="question6">How do I use the Hasanat section?</string>
+    <string name="question7"> How do I Advertise my business in Daleelo?</string>
+    <string name="Answer1">Daleelo’s My Stuff allows you to browse saved Businesses listings, Spotlights, Deals, Events, Classifieds posts, Hasanat listings, and Masajid listings for later reference. To do so, simply visit the page you would like to save and hit the Save button. That’s it! When you want to revisit one of your saved pages, just tap the My Stuff button on Daleelo’s homepage or the My Stuff icon at the bottom of each page (next to the Home icon).Want to delete saved listings from your My Stuff page? Tap the Edit button and then the red delete button that appears next to each listing. Once you’re finished deleting, tap the Done button.</string>
+    <string name="Answer2">Changing your location on Daleelo is as simple as tapping the location text at the top of each page. You will be able to choose any US location and view all of its corresponding Business listings, Spotlights, Deals, Events, Classifieds posts, Hasanat listings, and Masajid listings.Daleelo also allows you to change your mile radius for the entire application from the get-go. Just tap the More button at the bottom of the Daleelo homepage and select Set Radius. Choose your desired mile radius and you’re good to go! Now every page you browse will display listings according to the mile radius you chose. You may still change your mile radius individually on each page by going to the category’s Filter page.</string>
+    <string name="Answer3">The Daleelo Team knows that today’s shopper wants to know about all the deals in their area. So, we’ve created the Daleelo Spotlights and Deals sections. Spotlights are a way for businesses to let customers know what new and exciting arrivals they may have. Deals are discounts and/or specials businesses may be holding. Both help the Daleelo user be aware of the best deals in their community.</string>
+    <string name="Answer4">When browsing through Daleelo, we want to help you find exactly what you are looking for. So, we added Filter settings to every appropriate page. Just look for the Filter button or the Settings icon at the top right of each page.Filter settings will allow you to sort listings by Name or Distance, change your mile radius using the Distance bar, view businesses with Deals only, search by Business Name or even Business Owner, and categorize your search even further through a Category dropdown menu when appropriate.</string>
+    <string name="Answer5">Events are displayed easily on our Calendars with dots in the month view and bars in the week and day views. We have sorted our events into two categories: Regular Events and Fundraising Events. A dark gray dot or bar symbolizes a regular event, and a green dot or bar symbolizes a fundraising event.</string>
+    <string name="Answer6">Daleelo’s Hasanat section was created to provide a way for our users to give their Zakat and Sadaqa donations easily and effortlessly. It has been separated into four sections: Zakat, Sadaqa, Fundraising Calendar, and Organizations.Zakat will include specific organizations that our users can pay their Zakat through. Please visit our Zakat section to learn more about Zakat and read through our Zakat FAQ.Sadaqa will have a number of listings that range from organizations to youth centers to community projects. These are causes, not necessarily organizations.So, we added an Organizations section as well so that Daleelo users can view all organizations they can donate to.Fundraising Calendar is essentially the Daleelo events calendar, but it only displays Fundraising events that our users may donate through the event page at the event and even before.</string>
+    <string name="Answer7">Visit our Advertise page by tapping the Advertise button at the bottom of the Daleelo homepage and fill out your Business User Information and Payment Information. Daleelo will contact you shortly after submitting with more details.</string>
+
+    <!-- zakat calculator -->
+    <string name="help1">Money you have on Hand and in Bank Accounts regardless of when you acquire it</string>
+    <string name="help2">According to the majority of schools of thoughts, there is no Zakat on Womens jewelry, and ornaments, so long as they are for personal use. If such jewelry attains a quantity of extravagance or is used as store as wealth, then they are zakatable the Hanafi position is that jewelry is zakatable as long as it reaches Nisab</string>
+    <string name="help3">Money that you own but with others and you excepted to receive, such as money you loaned to others, deposits, excepted tax returns, payroll check you worked for but you did not receive yet</string>
+    <string name="help4">Invested funds and retirement accounts and pension plans you can withdraw</string>
+    <string name="help5">Business cash on hand and in banks plus invoice due and the Net value of business inventory and trade goods</string>
+    <string name="help6">Automated calculation of above total</string>
+    <string name="help7">if the total amount is less than Nisab(varies but now $4700), then the amount here is zero. If Total value is over Nissab, then Zakat Cue is Total x 0.025(If the amount is 0, then no Zakat is due)</string>
+    <string name="disclimer">Daleelo does not control, is not responsible for, and make no representation or warranties with respect to any user content, You are solely responsible for your actions. Please read our Terms &amp; Conditions for more Information.</string>
+
+    <!-- Business Ads Help texts -->
+    <string name="featured">Featured provides the most coverage for your business. You will receive the 6 spotlights/deals in the duration of the year, and your business listing will be in gold at the top of the four appropriate categories of your choice.</string>
+    <string name="top4">Top 4 will provide you with 4 spotlights in the duration of the year, and your business listing will appear as one of the first four listings on the first page of the three appropriate categories of your choice.</string>
+    <string name="top9">Top 9 will provide you with 2 spotlights/deals in the duration of the year,and your business listing will appear as one of the first five listings on the first page of the two categories of your choice after the first four listings.</string>
+    <string name="general">General listing will provide you with a business listing within one appropriate category of your choice.</string>
+
+    
+
+</resources>

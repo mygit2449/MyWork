@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/give_listrow_REL_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/give_listrow_BTN_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/btn_icon_delete"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/give_listrow_REL_delete"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/give_listrow_TXT_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Featured Item"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/give_listrow_TXT_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/give_listrow_TXT_name"
+            android:layout_below="@+id/give_listrow_TXT_name"
+            android:layout_toLeftOf="@+id/give_listrow_TXT_distance"
+            android:text="Address"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/give_listrow_IMG_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/give_listrow_TXT_address"
+            android:layout_below="@+id/give_listrow_TXT_address"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/icon_phone" />
+
+        <TextView
+            android:id="@+id/give_listrow_TXT_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/give_listrow_TXT_address"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/give_listrow_IMG_phone"
+            android:text="7396718033"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/give_listrow_TXT_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/hasanat_desc_IMG_arrow"
+            android:text="0 mi"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/hasanat_desc_IMG_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

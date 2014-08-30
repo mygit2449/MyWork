@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/events_REL_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/events_TXT_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Fundraising Calendar"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/events_IMGBTN_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:src="@drawable/icon_settings" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/events_heading_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_REL_title"
+        android:background="#000000"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/prevMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/left_arrow" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/nextMonth"
+            android:layout_toRightOf="@+id/prevMonth"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/gregorian_txtView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="April 2012"
+                android:textColor="#3BB9FF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/islamic_txtView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="Ahamad - Aamdma "
+                android:textColor="#F75D59"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nextMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/right_arrow" >
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/event_banner_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_heading_layout"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/event_IMG_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:visibility="gone" 
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendar Sponsored by"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Foundation"
+                android:textColor="#153E7E"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/calendarheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_banner_layout"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/weeksheading" >
+    </ImageView>
+
+    <GridView
+        android:id="@+id/calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calendar_buttons_layout"
+        android:layout_below="@+id/calendarheader"
+        android:numColumns="7" >
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/calendar_buttons_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/today_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_icon_event_today" />
+
+        <Button
+            android:id="@+id/month_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_month_selected" />
+
+        <Button
+            android:id="@+id/week_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_week" />
+
+        <Button
+            android:id="@+id/day_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_icon_event_day" />
+
+        <Button
+            android:id="@+id/list_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_list" />
+    </LinearLayout>
+
+    <!--
+    <ListView
+        android:id="@+id/events_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/spotlight_row_REL_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/spotlight_row_BTN_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/btn_icon_delete"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/spotlight_row_REL_delete"
+        android:background="#00000000"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/spotlight_REL_IMG"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/spotlight_row_IMG"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/daleelo_logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/spotlight_row_TXT_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spotlight_row_TXT_distance"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/spotlight_row_IMG_arrow"
+            android:layout_toRightOf="@+id/spotlight_REL_IMG"
+            android:singleLine="true"
+            android:text="Test"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/spotlight_row_TXT_desp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spotlight_row_TXT_name"
+            android:layout_below="@+id/spotlight_row_TXT_name"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/spotlight_row_IMG_arrow"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Test Description"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/spotlight_row_IMG_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_arrow" />
+
+        <TextView
+            android:id="@+id/spotlight_row_TXT_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="0.3 mi"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/zakat_calculator_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/zakat_calculator_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Zakat Calculator"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/zakat_calculator_TXT_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zakat_calculator_REL_title"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:text="Zakatable Line Items"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zakat_calculator_TXT_title" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_cash"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                  
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_cash"
+                        android:text="1. Personal Cash "
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_cash"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_gold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_cash"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                   
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_gold"
+                        android:text="@string/zakat_calculator_gold"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_gold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/zakat_calculator_EDT_cash"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_recievables"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_gold"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_recievables"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                   
+                    
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_recievables"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_recievables"
+                        android:text="@string/zakat_calculator_receivables"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_recievables"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_stocks"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_recievables"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_stocks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+                    
+                   
+
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_stocks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_stocks"
+                        android:text="@string/zakat_calculator_stocks"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_stocks"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_businesscash"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_stocks"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_businesscash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                 
+                    
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_businesscash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_businesscash"
+                        android:layout_toLeftOf="@+id/zakat_calculator_EDT_businesscash"
+                        android:text="@string/zakat_calculator_businesscash"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_businesscash"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0.0"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_businesscash"
+                    android:padding="5dp"
+                    android:text="0.0" >
+
+                    <Button
+                        android:id="@+id/zakat_calculator_BTN_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/zakat_calculator_BTN_calculate"
+                        android:background="@drawable/btn_reset" />
+
+                    <Button
+                        android:id="@+id/zakat_calculator_BTN_calculate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_calculate" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_totalamt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_btn"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_totalamt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                  
+                    
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_totalamt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_totalamt"
+                        android:text="Total Amount:"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_totalamt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:editable="false"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zakat_calculator_REL_zakatdue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_totalamt"
+                    android:padding="5dp" >
+
+                    <ImageButton
+                        android:id="@+id/zakat_calculator_IMGB_zakatdue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/questionmark_icon" />
+
+                  
+                    <TextView
+                        android:id="@+id/zakat_calculator_TXT_zakatdue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/zakat_calculator_IMGB_zakatdue"
+                        android:text="Zakat Due:"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/zakat_calculator_EDT_zakatdue"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_edit"
+                        android:editable="false"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/zakat_calculator_BTN_give"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_calculator_REL_zakatdue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_give" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

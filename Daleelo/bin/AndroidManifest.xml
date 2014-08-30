@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daleelo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+   
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:name=".Application.DaleeloApplication"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".Main.Activities.SplashScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".QiblahReceiver.PrayerTimesReceiver"
+            android:process=":remote" />
+
+        <!-- User Activity -->
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".User.Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".User.Activities.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".User.Activities.RegisterConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".User.Activities.UserSettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".User.Activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- EOF User Activity -->
+
+
+        <!-- Main Home Activity -->
+
+        <activity
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:name=".Main.Activities.MainHomeScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Main.Activities.SelectCityScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".More.Activities.MoreOptionList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".More.Activities.DisplayURLData"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".More.Activities.PersonalProfileDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".More.Activities.TermsAndConditionsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".More.Activities.FrequentlyAskedQuestions"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Ads.Activities.AdvertiseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MyStuff.Activities.MyStuffActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- EOF Main Home Activity -->
+
+
+        <!-- Helper Activity -->
+
+        <activity
+            android:name=".helper.PhotoGalleryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".twitter.android.TwitterPostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialog"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- EOF Helper Activity -->
+
+
+        <!-- Qiblah Activity -->
+
+        <activity
+            android:name=".Qiblah.Activites.QiblahPrayerTimingScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Qiblah.Activites.QiblahSettingsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- EOF Qiblah Activity -->
+
+
+        <!-- Business Activity -->
+
+        <activity
+            android:name=".Business.Activities.BusinessListByID"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessMoreCategories"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessSpecialOfferDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessReviewList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessReviewDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessFiltertScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessWriteReviewScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Business.Activities.BusinessMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- EOF Business Activity -->
+
+
+        <!-- DashBoard Activity -->
+
+        <activity
+            android:name=".Dashboard.Activities.SpotlightListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.SpotlightDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.SpotLightMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.DealsListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.DealsDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.DealsMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.Activities.EventDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.ClassifiedDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:launchMode="singleTop"
+            android:name=".DashBoardClassified.Activities.ClassifiedListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.ClassifiedByCategoryId"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.ClassifiedFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.MyClassifiedListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.PostClassifiedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.ClassifiedPostConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardClassified.Activities.ClassifiedItemDetailDesp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:configChanges="orientation"
+            android:name=".DashBoardClassified.Activities.PostClassifiedSecondActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- EOF DashBoard Activity -->
+
+
+        <!-- Masjid Activity -->
+
+        <activity
+            android:name=".Masjid.Activities.MasjidListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Masjid.Activities.MasjidMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Masjid.Activities.MasjidFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Masjid.Activities.MasjidDetailDescription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".com.readystatesoftware.maps.TapControlledMapView" />
+
+        <!-- EOF Masjid Activity -->
+
+
+        <!-- Hasanat Activity -->
+
+        <activity
+            android:name=".Hasanat.Activities.HasanatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatCalculatorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.SadakaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.SadaqaFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.GiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.OrganizationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.OrganizationFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.BusinessDetailsDescActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.GiveDetailDescActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.DetailDescActivityById"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.HasanatDonateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".helper.PrayerScheduleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.HasanatMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Helper.MoreInformationMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatLearnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatFAQActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.FundRaisingCalendar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hasanat.Activities.ZakatLearnView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- EOF Hasanat Activity -->
+
+
+        <!-- DashBoard Events Activity -->
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsCalendarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.CalendarEventDetailDesc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsDetailsByWeekActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsDetailsByDayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsDetailsByWeekActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsIslamicCalendarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsCalendarEventListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsCalendarSettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DashBoardEvents.Activities.EventsMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- DashBoard Events Activity -->
+
+
+        <!-- TripPlanning Activity -->
+
+        <activity
+            android:configChanges="orientation"
+            android:name=".TripPlanner.Activities.TripPlannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerMapActivityNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerCustomizedOverlay"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerAddYourOwnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TripPlanner.Activities.TripPlannerRouteWebView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+         <activity
+            android:name=".TripPlanner.Activities.TripPlannerAddFromContacts"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        
+
+        <!-- TripPlanning Activity -->
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <!-- GlobalSearch Activity -->
+
+        <activity
+            android:configChanges="orientation"
+            android:name=".GlobalSearch.GlobalSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:configChanges="orientation"
+            android:name=".GlobalSearch.GlobalSearchListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+    </application>
+
+</manifest>

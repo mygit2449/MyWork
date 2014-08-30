@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/sadaka_filter_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/sadaka_filter_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/sadaka_filter_BTN_done"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="Sadaqa Filter Settings"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/sadaka_filter_BTN_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_icon_done_blue" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sadaka_filter_TXT_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sadaka_filter_REL_title"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="Sort Sadaqa By"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/sadaka_filter_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sadaka_filter_TXT_title"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:checkedButton="@+id/sadaka_filter_radio_name"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/sadaka_filter_radio_name"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customised_filter_left_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/sadaka_filter_radio_distance"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customised_filter_right_radiobutton"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:text="Distance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sadaka_filter_radiogroup"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/sadaka_filter_REL_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/sadaka_filter_REL_chk"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_round_rect_nine"
+                    android:padding="5dp" >
+
+                    <!--
+                    <CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_all"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="All"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_civil"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Civil Rights"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_all"
+		        	android:layout_below="@+id/sadaka_filter_CHK_all"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_community"
+		        	android:layout_width="150dp"
+		        	android:layout_height="wrap_content"
+		        	android:text="Community Projects"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignParentRight="true"
+		        	android:layout_marginLeft="5dp"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_dawah"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Dawah"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_civil"
+		        	android:layout_below="@+id/sadaka_filter_CHK_civil"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_Disaster"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Disaster Relief"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_community"
+		        	android:layout_below="@+id/sadaka_filter_CHK_community"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_education"
+		        	android:layout_width="150dp"
+		        	android:layout_height="wrap_content"
+		        	android:text="Education/School"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_dawah"
+		        	android:layout_below="@+id/sadaka_filter_CHK_dawah"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_Masjid"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Masjid"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_Disaster"
+		        	android:layout_below="@+id/sadaka_filter_CHK_Disaster"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_medical"
+		        	android:layout_width="150dp"
+		        	android:layout_height="wrap_content"
+		        	android:text="Medical/Disability"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_education"
+		        	android:layout_below="@+id/sadaka_filter_CHK_education"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_orphan"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Orphan Sponsors"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_Masjid"
+		        	android:layout_below="@+id/sadaka_filter_CHK_Masjid"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_social"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Social Services"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_medical"
+		        	android:layout_below="@+id/sadaka_filter_CHK_medical"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_udhyah"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Udhyah"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_orphan"
+		        	android:layout_below="@+id/sadaka_filter_CHK_orphan"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_volunteer"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Volunteering"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_social"
+		        	android:layout_below="@+id/sadaka_filter_CHK_social"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_waqf"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Waqf"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_udhyah"
+		        	android:layout_below="@+id/sadaka_filter_CHK_udhyah"
+		        	/>
+		        	<CheckBox 
+		        	android:id="@+id/sadaka_filter_CHK_youth"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Youth Centers"
+		        	android:textColor="@color/black"
+		        	android:button="@drawable/customised_filter_checkbox"
+		        	android:layout_alignLeft="@+id/sadaka_filter_CHK_waqf"
+		        	android:layout_below="@+id/sadaka_filter_CHK_waqf"
+		        	/>
+                    -->
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/sadaka_filter_seperator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/sadaka_filter_REL_chk"
+                    android:background="@color/grey" />
+
+                <RelativeLayout
+                    android:id="@+id/sadaka_filter_REL_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sadaka_filter_seperator"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/sadaka_filter_TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Give to"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/sadaka_filter_SPN_country"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sadaka_filter_TXT"
+                        android:layout_marginLeft="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

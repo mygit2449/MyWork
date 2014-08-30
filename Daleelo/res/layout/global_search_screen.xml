@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_screen_REL_fixed"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/search_screen_REL_fix"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+
+        <RelativeLayout
+            android:id="@+id/search_screen_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/search_screen_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/search_screen_BTN_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/btn_icon_cancel" />
+
+            <Button
+                android:id="@+id/search_screen_BTN_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_icon_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_screen_REL_what"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_screen_REL_header"
+            android:background="@android:color/black"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/search_screen_REL1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/search_screen_TXT_what"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/white_rect"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="What :"
+                    android:textColor="#808080"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/search_screen_ETXT_what"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/search_screen_TXT_what"
+                    android:background="@drawable/white_rect"
+                    android:hint="e.g Grocery"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/search_screen_REL_what"
+            android:background="@android:color/white"
+            android:scrollingCache="false" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

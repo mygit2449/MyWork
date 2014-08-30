@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skeyedex"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+   <uses-permission android:name="android.permission.ACCESS_PROVIDER" >
+    </uses-permission>
+    <application
+        android:icon="@drawable/main_icon"
+        android:label="@string/app_name" >
+        <service android:name=".EmailDownLoader.EmailDownLoadService" >
+        </service>
+
+        <activity
+            android:name=".Home.SplashView"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+              
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home.HomeScreenOutLineView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".Home.HomeScreenView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" 
+            android:configChanges="orientation"/>
+        <activity
+            android:name=".Home.TermsAndConditionsView"
+            android:label="@string/terms_view"
+            android:screenOrientation="user" 
+            android:configChanges="orientation">
+        </activity>
+        <activity
+            android:name=".Settings.SettingsScreenView"
+            android:label="@string/settings_screen"
+            android:windowSoftInputMode="stateHidden" 
+            android:configChanges="orientation"/>
+        <activity
+            android:name=".Settings.AccountsScreen"
+            android:label="@string/accounts_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Settings.LoginForSettings"
+            android:label="@string/login_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Settings.AccountsSettings"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Settings.PhoneContactDetails"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Settings.AddFamilyAndFriends"
+            android:label="@string/add_family_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TabListActivities.SkeyedexTabListActivity"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TabListActivities.EmailListScreen"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmailDownLoader.EmailAuthenticatorActivity"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TextMessages.Text_listActivity"
+            android:label="@string/account_screen"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmailsList.Emails_ListActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmailsList.ReadEmailActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".GroupList.Group_ListActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SearchEmails.SearchEmailsListActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

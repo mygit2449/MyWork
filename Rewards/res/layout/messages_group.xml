@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/messages_group_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msg_strip"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/messages_group_IMG"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/eg"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/messages_group_REL_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/messages_group_IMG"
+            android:padding="5dp" >
+            
+            <TextView 
+                android:id="@+id/messages_group_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/titletext"
+                android:text="@string/title"
+                android:singleLine="true"/>
+            
+            
+            <TextView 
+                android:id="@+id/messages_group_TXT_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_group_TXT_title"
+                style="@style/descriptiontext"
+                android:text="@string/title"
+                android:singleLine="true"
+                android:layout_marginTop="10dp"/>
+            
+            
+            <TextView 
+                android:id="@+id/messages_group_TXT_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_group_TXT_description"
+                style="@style/descriptiontext"
+                android:text="@string/title"
+                android:singleLine="true"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

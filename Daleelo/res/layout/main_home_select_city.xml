@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_light_blue" >
+
+        <RelativeLayout
+            android:id="@+id/app_city_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/app_city_TXT_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Select City"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/app_city_REL_serach"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/app_city_REL_title"
+            android:background="@drawable/bg_search_strip_small"
+            android:gravity="center"
+            android:padding="7dp" >
+
+            <EditText
+                android:id="@+id/app_city_TXT_serach"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/app_city_BTN_home"
+                android:background="@drawable/rounded_rect"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapSentences"
+                android:padding="6dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/app_city_BTN_reserve_spotlight"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/app_city_REL_serach"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

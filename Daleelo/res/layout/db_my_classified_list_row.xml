@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:padding="5dp" 
+    android:minHeight="50dp">
+
+   <CheckBox
+        android:id="@+id/my_classified_row_CB_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="-15dp"
+        android:layout_centerVertical="true"
+        android:button="@drawable/customised_list_radio_button" />
+
+    <TextView
+        android:id="@+id/my_classified_row_TXT_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/my_classified_row_CB_select"
+        android:text="Test"
+        android:textColor="#000000"
+        android:textStyle="bold" 
+        android:layout_marginLeft="5dp"/>
+
+  
+
+</RelativeLayout>

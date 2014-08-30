@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/heading_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/tripplanner_navigatebar" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"                                                       
+                android:orientation="vertical" 
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/routepath_list_imgView" 
+                
+                >
+
+                <TextView
+                    android:id="@+id/from_to_end_txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                   
+                    android:paddingRight="5dp"
+                    android:text="Hyderabad - Karimnagar"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"                    
+                    android:singleLine="true"                     
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/from_to_end_distance_txtView"
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"                    
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"                   
+                    android:singleLine="true"                    
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/routepath_list_imgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_icon_list" />
+        </RelativeLayout>
+
+        <com.balloon.readystatesoftware.maps.TapControlledMapView            
+            android:id="@+id/map_view"
+            android:layout_width="400dp"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/heading_layout"
+            android:apiKey="0WOVXEU9tnlaFQD9u-cHr0nZ-fwZXRDUUqEYj_A"
+            android:clickable="true"
+            android:enabled="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

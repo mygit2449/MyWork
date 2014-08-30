@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dip"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/personalProfile_REL_top"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+            
+            <TextView
+                android:id="@+id/more_TXT_MoreTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80dip"
+                android:layout_marginRight="100dip"
+                android:layout_marginTop="5dip"
+                android:text="Personal Profile"
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/personalProfile_ScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personalProfile_REL_top"
+            android:layout_marginTop="5dip"
+            android:paddingBottom="10dip" >
+
+            <RelativeLayout
+                android:id="@+id/personalProfile_REL_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/personalProfile_REL_nameInfo"
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/personalProfile_REL_top"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/rounded_rectangle" >
+
+                    <RelativeLayout
+                        android:id="@+id/personalProfile_REL_firstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_firstname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First Name"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_firstname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2dip"
+                            android:layout_toRightOf="@+id/personalProfile_TXT_firstname"
+                            android:background="@android:color/white"
+                            android:hint="First Name"
+                            android:paddingLeft="30dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/personalProfile_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@+id/personalProfile_REL_firstName"
+                        android:layout_marginTop="10dip"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/personalProfile_REL_lastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personalProfile_view"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:paddingBottom="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_lastname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last Name"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_lastname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2dip"
+                            android:layout_toRightOf="@+id/personalProfile_TXT_lastname"
+                            android:background="@android:color/white"
+                            android:hint="Last Name"
+                            android:paddingLeft="30dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/personalProfile_IMG_addUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/personalProfile_REL_nameInfo"
+                    android:src="@drawable/add_user" />
+
+                <RelativeLayout
+                    android:id="@+id/personamProfile_REL_otherDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personalProfile_REL_nameInfo"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/rounded_rectangle"
+                    android:paddingBottom="10dip" >
+
+                    <RelativeLayout
+                        android:id="@+id/personamProfile_REL_emailId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_emailId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email Id"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_emailId"
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2dip"
+                            android:background="@android:color/white"
+                            android:hint=" Email Id"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/personalProfile_VIEW_emailId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@+id/personamProfile_REL_emailId"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/personamProfile_REL_phoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personalProfile_VIEW_emailId"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_phoneNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone No"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_phoneNo"
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/white"
+                            android:hint="phone No"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/personalProfile_VIEW_phoneNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@+id/personamProfile_REL_phoneNo"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/personamProfile_REL_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personalProfile_VIEW_phoneNo"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_location"
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/white"
+                            android:hint="Location"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/personalProfile_VIEW_location"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@+id/personamProfile_REL_location"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/personamProfile_REL_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personalProfile_VIEW_location"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_gender"
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/white"
+                            android:hint="Gender"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/personalProfile_VIEW_gender"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@+id/personamProfile_REL_Gender"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/personamProfile_REL_DOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personalProfile_VIEW_gender"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/personalProfile_TXT_DOB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DOB"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/personalProfile_ET_DOB"
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/white"
+                            android:hint="DOB"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textSize="14dip" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/personalProfile_REL_termsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personamProfile_REL_otherDetails"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip" >
+
+                    <CheckBox
+                        android:id="@+id/personalProfile_checkbox"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:button="@drawable/checkbox_background" />
+
+                    <TextView
+                        android:id="@+id/personalProfile_TXT_termsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip"
+                        android:layout_toRightOf="@+id/personalProfile_checkbox"
+                        android:text="Terms And Conditions"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/personalProfile_BTN_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personalProfile_REL_termsAndConditions"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_icon_submit_long" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

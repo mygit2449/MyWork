@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/image1"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image2"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image3"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image4"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image5"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image6"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image7"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image8"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image9"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image10"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image11"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image12"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image13"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image14"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image15"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image16"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image17"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image18"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image19"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image20"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image21"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image22"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image23"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image24"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image25"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image26"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image27"
+        android:duration="75"/>
+
+    <item
+        android:drawable="@drawable/image28"
+        android:duration="75"/>
+
+</animation-list>

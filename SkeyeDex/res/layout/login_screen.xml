@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/LoginScreen_relative_content"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <ScrollView
+            android:id="@+id/LoginScreen_scroll_coontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/black" >
+
+            <LinearLayout
+                android:id="@+id/login_acc_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/login_text_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/logindetails"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/Login_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:hint="@string/emailid"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/Login_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="10dip"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/login_REL_BTN"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:background="#666666" >
+
+            <Button
+                android:id="@+id/next_BTN_login"
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dip"
+                android:drawableRight="@drawable/right"
+                android:gravity="center"
+                android:text="@string/next" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

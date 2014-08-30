@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_listview_Rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#777777"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/email_listview_Rel_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        >
+
+        <ImageView
+            android:id="@+id/emaillistrow_icon_yellow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="2dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/yellow_box" />
+
+        <ImageView
+            android:id="@+id/emaillistrow_icon_blue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/emaillistrow_icon_yellow"
+            android:paddingBottom="2dp"
+            android:paddingRight="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/blue_box"
+             android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/emaillistrow_icon_green"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/emaillistrow_icon_yellow"
+            android:paddingBottom="2dp"
+            android:paddingRight="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/green_box"
+             android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/emaillistrow_icon_white"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/emaillistrow_icon_blue"
+            android:layout_toRightOf="@+id/emaillistrow_icon_green"
+            android:paddingBottom="2dp"
+            android:paddingRight="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_box"
+             android:visibility="gone" />
+        
+        <ImageView
+            android:id="@+id/emaillistrow_icon_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dip"
+            android:paddingBottom="2dp"
+            android:paddingRight="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/text_black_icon"
+             android:visibility="gone" 
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/emaillistrow_txt_partofemail"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/email_listview_Rel_img"
+        android:paddingLeft="10dip"
+        android:paddingTop="10dip"
+        android:singleLine="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/emaillistrow_txt_sender"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emaillistrow_txt_partofemail"
+        android:layout_toRightOf="@+id/email_listview_Rel_img"
+        android:paddingLeft="10dip"
+        android:paddingTop="5dip"
+        android:singleLine="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/emaillistrow_txt_datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="5dip"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/emaillistrow_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="5dip"
+        android:textColor="#000000" />
+    <CheckBox
+        android:id="@+id/emaillistrow_chk_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/emaillistrow_txt_datetime"
+        android:checked="false"
+        android:focusable="false" />
+
+    <ImageView
+        android:id="@+id/emaillistrow_icon_indicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/emaillistrow_chk_check"
+        android:layout_below="@+id/emaillistrow_txt_datetime"
+        android:layout_toLeftOf="@+id/emaillistrow_chk_check" />
+
+</RelativeLayout>

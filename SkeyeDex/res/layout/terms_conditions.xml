@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@android:color/darker_gray"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/TCView_relative_content"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="10dp" >
+
+        <ScrollView
+            android:id="@+id/TCView_scroll_disclaimer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/TCView_linear_buttons"
+            android:layout_margin="10dip"
+            android:background="@drawable/skeyedex_border"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/TCView_txt_disclaimer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/desclimertext"
+                android:textColor="#000000"
+                android:textSize="15dip" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/TCView_linear_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/TCView_btn_decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/decline_button"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/TCView_btn_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accept_btn"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/masjidlisting_REL_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/masjidlisting_BTN_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/btn_icon_delete"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/masjidlisting_REL_delete"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/masjidlisting_TXT_dallasislamic_center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/masjidlisting_TXT_masjid_distance"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Dallas Islamic center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/masjidlisting_TXT_masjid_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/masjidlisting_TXT_dallasislamic_center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:text="Hyderabad, AndhraPradesh, India "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/masjidlisting_TXT_masjid_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:text="5.5 mi"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/masjidlisting_IMG_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/masjidlisting_TXT_masjid_address"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/icon_phone" />
+
+        <TextView
+            android:id="@+id/masjidlisting_TXT_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/masjidlisting_TXT_masjid_address"
+            android:layout_toRightOf="@+id/masjidlisting_IMG_phone"
+            android:text=" (888) 438-0881"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

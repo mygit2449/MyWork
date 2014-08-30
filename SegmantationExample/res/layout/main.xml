@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+    
+    <Button 
+        android:id="@+id/bluebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="second"
+        android:layout_centerInParent="true"
+        android:padding="3dp"
+        android:background="#ffff00"
+        android:onClick="onBlueclick"
+        />
+    
+     <Button 
+        android:id="@+id/redbtn"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/bluebtn"
+        android:padding="3dp"
+        android:background="#ff0000"
+        android:onClick="onRedclick"/>
+    
+
+</RelativeLayout>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/more_personal_profile_REL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/more_personal_profile_details_REL_Fixed"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_filter" >
+
+        <RelativeLayout
+            android:id="@+id/more_personal_profile_details_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/more_personal_profile_details_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Personal Profile"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/more_personal_profile_details_Scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/more_personal_profile_details_REL_header"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/more_personal_profile_details_REL_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/more_personal_profile_details_REL_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/more_personal_profile_details_REL_header"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rectangle" >
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_firstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_firstname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="First Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_firstname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_firstname"
+                            android:background="@android:color/white"
+                            android:hint="First name"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/more_personal_profile_details_View"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/more_personal_profile_details_REL_firstName"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_lastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_personal_profile_details_View"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_lastname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Last Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_lastname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_lastname"
+                            android:background="@android:color/white"
+                            android:hint="Last name"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/more_personal_profile_details_Img_userphoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/more_personal_profile_details_REL_name"
+                    android:src="@drawable/add_user" />
+
+                <RelativeLayout
+                    android:id="@+id/more_personal_profile_details_REL_otherdetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/more_personal_profile_details_REL_name"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_rectangle" >
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_emailId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_emailId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Email Id"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_emailId"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_emailId"
+                            android:background="@android:color/white"
+                            android:hint="Email Id"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/more_personal_profile_details_View2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/more_personal_profile_details_REL_emailId"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_phoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_personal_profile_details_View2"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_phoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Last Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_phoneNumber"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_phoneNumber"
+                            android:background="@android:color/white"
+                            android:hint="Phone nummber"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/more_personal_profile_details_View3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/more_personal_profile_details_REL_phoneNumber"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_Location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_personal_profile_details_View3"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Location"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_Location"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_Location"
+                            android:background="@android:color/white"
+                            android:hint="Location"
+                            android:inputType="text"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/more_personal_profile_details_View4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/more_personal_profile_details_REL_Location"
+                        android:background="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_personal_profile_details_View4"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_Gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Gender"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_Gender"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_Gender"
+                            android:background="@android:color/white"
+                            android:hint="Gender"
+                            android:inputType="text"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/more_personal_profile_details_View5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/more_personal_profile_details_REL_Gender"
+                        android:background="@android:color/black" >
+                    </View>
+
+                    <RelativeLayout
+                        android:id="@+id/more_personal_profile_details_REL_DOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_personal_profile_details_View5"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:id="@+id/more_personal_profile_details_TXT_DOB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="DOB"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/more_personal_profile_details_ETXT_DOB"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/more_personal_profile_details_TXT_DOB"
+                            android:background="@android:color/white"
+                            android:hint="DOB"
+                            android:inputType="text"
+                            android:singleLine="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/personalProfile_REL_termsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/more_personal_profile_details_REL_otherdetails"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip" >
+
+                    <CheckBox
+                        android:id="@+id/personalProfile_checkbox"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:button="@drawable/checkbox_background" />
+
+                    <TextView
+                        android:id="@+id/personalProfile_TXT_termsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip"
+                        android:layout_toRightOf="@+id/personalProfile_checkbox"
+                        android:text="Terms And Conditions"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/personalProfile_BTN_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personalProfile_REL_termsAndConditions"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_icon_submit_long" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

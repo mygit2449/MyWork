@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/classified_by_id_row_REL_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/classified_by_id_row_BTN_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/btn_icon_delete"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/classified_by_id_row_REL_delete"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/classified_by_id_row_TXT_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:text="100.00"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/classified_by_id_row_TXT_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/classified_by_id_row_TXT_distance"
+            android:layout_toRightOf="@+id/classified_by_id_row_TXT_price"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="- name"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/classified_by_id_row_TXT_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/classified_by_id_row_TXT_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="0.0 mi"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

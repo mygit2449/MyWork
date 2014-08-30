@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="custom_theme_colorPink">#F75D59</color>
+    <color name="custom_theme_colorBlue">#3BB9FF</color>
+    <color name="custom_theme_colorGreen">#458B00</color>
+
+    <style name="customtheme_pink">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/custom_theme_colorPink</item>
+    </style>
+
+    <style name="customtheme_blue">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/custom_theme_colorBlue</item>
+    </style>
+
+    <style name="customtheme_green">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/custom_theme_colorGreen</item>
+    </style>
+
+    <style name="boldText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="redText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#F75D59</item>
+    </style>
+
+    <style name="greenText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#458B00</item>
+    </style>
+
+    <style name="blueText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">#000080</item>
+    </style>
+
+    <style name="normalText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#C0C0C0</item>
+    </style>
+
+</resources>

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/events_REL_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/events_TXT_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Islamic Calendar"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/events_IMGBTN_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:onClick="onSettingCliked"
+            android:src="@drawable/icon_settings" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/events_heading_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_REL_title"
+        android:background="#000000"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/cal_by_day_btn_prevMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onPreviousClinked"
+            android:scaleType="fitXY"
+            android:src="@drawable/left_arrow" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/cal_by_day_btn_nextMonth"
+            android:layout_toRightOf="@+id/cal_by_day_btn_prevMonth"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/cal_by_day_txt_gregorian_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="April 2012"
+                android:textColor="#3BB9FF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cal_by_day_txt_islamic_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="Ahamad - Aamdma "
+                android:textColor="#F75D59"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cal_by_day_btn_nextMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="onNextClicked"
+            android:scaleType="fitXY"
+            android:src="@drawable/right_arrow" >
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zakat_found_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_heading_layout"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/event_IMG_banner_day"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/calendar_buttons_layout"
+        android:layout_below="@+id/zakat_found_layout"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/hours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_0am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_1am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_2am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_3am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_4am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_5am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_6am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_7am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_8am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_9am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_10am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_11am"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11 AM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_12pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_1pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_2pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_3pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_4pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_5pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_6pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_7pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_8pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_9pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_10pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cal_by_day_rlayout_11pm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11 PM" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/grey" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/calendar_buttons_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/today_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_icon_event_today"
+            android:onClick="onTodayClicked" />
+
+        <Button
+            android:id="@+id/month_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_month"
+            android:onClick="onMonthClicked" />
+
+        <Button
+            android:id="@+id/week_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_week"
+            android:onClick="onWeekClicked" />
+
+        <Button
+            android:id="@+id/day_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_icon_event_day_selected" />
+
+        <Button
+            android:id="@+id/list_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_icon_event_list"
+            android:onClick="onListClicked" />
+    </LinearLayout>
+
+</RelativeLayout>

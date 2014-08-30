@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dip"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/business_user_REL_done"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <ImageView
+                android:id="@+id/business_user_IMG_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="2dip"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/business_user_TXT_website_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/business_user_BTN_done"
+                android:layout_toLeftOf="@+id/business_user_BTN_done"
+                android:layout_toRightOf="@+id/business_user_IMG_aboutus"
+                android:gravity="center_horizontal"
+                android:text="@string/ads_websiteAddress"
+                android:textColor="@android:color/white"
+                android:textSize="12dip" />
+
+            <TextView
+                android:id="@+id/business_user_TXT_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/business_user_TXT_website_address"
+                android:layout_toLeftOf="@+id/business_user_BTN_done"
+                android:layout_toRightOf="@+id/business_user_IMG_aboutus"
+                android:gravity="center_horizontal"
+                android:text="@string/ads_phoneNumber"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/business_user_BTN_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dip"
+                android:src="@drawable/daleelo_logo" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/business_userDetails_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business_user_REL_done"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/business_user_REL_businessUser_information_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/business_user_TXT_businessUser_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="Business User Information"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/business_user_REL_businessUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_user_TXT_businessUser_info_title"
+                    android:layout_marginTop="2dip"
+                    android:background="#00000000"
+                    android:padding="5dip" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/rounded_rectangle" >
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_name_infor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_name_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Name"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_name"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_nameView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_name_infor"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_phone_infor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_nameView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_phone_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Phone"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_phoneNumber"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="phone" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_phoneView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_phone_infor"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_fax_infor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_phoneView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_fax_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Fax"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_fax"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:inputType="phone" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_faxview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_fax_infor"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_email_infor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_faxview"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_email_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Email"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_email"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="textEmailAddress"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_emailview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_email_infor"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_BusinessName_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_emailview"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_businessName_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Business Name"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_businessName"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="text"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_businessNameView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_BusinessName_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_BusinessPhone_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_businessNameView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_businessPhone_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Business Phone"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_businessPhone"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="phone"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_businessPhone_View"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_BusinessPhone_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_BusinessAddress_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_businessPhone_View"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_businessAddress_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="9dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Business Address"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_businessUser_info_businessAddress"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_businessAddressView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_BusinessAddress_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_category_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_businessAddressView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_category_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Category"
+                                android:textColor="@android:color/black" />
+
+                            <Spinner
+                                android:id="@+id/business_user_ET_businessUser_info_category"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/sub_category_et"
+                                android:inputType="text"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_businessUser_info_categoryView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_businessUser_info_category_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_businessUser_info_subCategory_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_businessUser_info_categoryView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_businessUser_info_subCategory_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Sub Category"
+                                android:textColor="@android:color/black" />
+
+                            <Spinner
+                                android:id="@+id/business_user_Spinner_businessUser_info_SubCategory"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/sub_category_et"
+                                android:paddingLeft="1dip" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/business_user_TXT_payment_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/business_user_REL_businessUser"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:text="Payment Information"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/business_user_REL_payment_Information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_user_TXT_payment_info_title"
+                    android:layout_marginTop="2dip"
+                    android:background="#00000000"
+                    android:padding="5dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_rectangle" >
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_noOfPayments_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_noOfPayments_titile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="No.Of Payments"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_noOfPayments"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="number" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_noOfPaymentsView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_noOfPayments_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_ccType_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_noOfPaymentsView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_ccType_info_tilte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="CC Type"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_ccType_info"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="number" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_ccType_infoView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_ccType_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_cardHolderName_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_ccType_infoView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_cardHolderName_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Cardholder Name"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_cardHolderName"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_cardHolderNameView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_cardHolderName_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_ccNumber_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_cardHolderNameView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_ccNumber_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="CC Number"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_ccNumber"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="number"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_ccNumberView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_ccNumber_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_ExpDate_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_ccNumberView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_ExpDate_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Exp Date"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_ExpDate"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip" 
+                                android:inputType="date"
+                                android:hint="MM/dd/yyyy"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_ExpDateView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_ExpDate_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_cvv2Code_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_ExpDateView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_cvv2Code_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="C V V2 Code"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_cvv2Code"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="number"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_cvv2CodeView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_cvv2Code_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_billingAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_cvv2CodeView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_billingAddress_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Billing Address"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_billingAddress"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true"
+                                android:inputType="text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_billingAddressView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_billingAddress"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_payment_Information_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_billingAddressView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_city_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="City"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_city"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:singleLine="true" 
+                                android:inputType="text"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_cityView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_payment_Information_city"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_state_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_cityView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_state_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="State"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_state"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip"
+                                android:inputType="text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/business_user_view_payment_Information_stateView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/business_user_REL_payment_Information_state_info"
+                            android:background="@android:color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/business_user_REL_payment_Information_zipCode_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/business_user_view_payment_Information_stateView"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:id="@+id/business_user_TXT_payment_Information_zipCode_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginTop="5dip"
+                                android:text="Zip Code"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/business_user_ET_payment_Information_zipCode_title"
+                                android:layout_width="150dip"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginRight="5dip"
+                                android:layout_marginTop="5dip"
+                                android:background="@drawable/edit_text_layout"
+                                android:paddingLeft="1dip" 
+                                android:inputType="number"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/business_user_REL_agreeTermsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_user_REL_payment_Information"
+                    android:layout_marginTop="10dip" >
+
+                    <CheckBox
+                        android:id="@+id/business_user_CheckBox_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="2dip"
+                        android:button="@drawable/checkbox_background" />
+
+                    <TextView
+                        android:id="@+id/business_user_TXT_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/business_user_CheckBox_agree"
+                        android:text="I agree the"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/business_user_Text_termsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/business_user_TXT_agree"
+                        android:text="Terms and Conditions"
+                        android:textColor="#0000ff"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/business_user_BTN_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business_user_REL_agreeTermsAndConditions"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_icon_submit_long" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

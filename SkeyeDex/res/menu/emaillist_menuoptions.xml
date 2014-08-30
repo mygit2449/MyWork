@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/emaillist_optionsmenu"
+	android:panelFullBackground="@drawable/black">
+	<item 
+		android:id="@+id/eamillist_optionsmenu_item_home"
+		android:title="Home"
+		android:icon="@drawable/home_icon"
+		/>
+	<item 
+		android:id="@+id/eamillist_optionsmenu_item_delete"
+		android:title="Delete"
+		android:icon="@drawable/trashcan_icon"/>
+	<item 
+		android:id="@+id/eamillist_optionsmenu_item_newmessage"
+		android:title="New Message"
+		android:icon="@drawable/newmsg_icon"/>
+	<item 
+		android:id="@+id/eamillist_optionsmenu_item_settings"
+		android:title="Settings"
+		android:icon="@drawable/settings_icon"/>
+</menu>

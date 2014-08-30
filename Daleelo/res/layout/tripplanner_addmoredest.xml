@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tripplanner_navigatebar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+            android:background="@drawable/tripplanner_navigatebar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/done_imgView"
+                android:layout_centerVertical="true"
+                android:text="Add More Destinations"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp" />
+
+            <ImageButton
+                android:id="@+id/done_imgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_icon_done_blue"
+                android:layout_centerVertical="true"
+                 />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/tripplanner_addmore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" 
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/addmore_txtView"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/tripplanner_addmore"
+                    android:background="@drawable/addressbar"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="Add More Destinations"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" 
+                    android:layout_marginTop="10dp"/>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

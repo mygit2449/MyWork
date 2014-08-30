@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="CustomTheme">        
+    <item name="android:windowNoTitle">true</item>
+    <item name="windowFrame">#00FF00</item>
+    <item name="windowBackground">#00FFFF</item>
+    <item name="panelForegroundColor">#FF000000</item>
+    <item name="panelBackgroundColor">#FFFFFFFF</item>
+    <item name="panelTextColor">?panelForegroundColor</item>
+    <item name="panelTextSize">14</item>
+    <item name="menuItemTextColor">?panelTextColor</item>
+    <item name="menuItemTextSize">?panelTextSize</item>
+  </style>
+</resources>

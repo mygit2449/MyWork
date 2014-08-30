@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/messages_child_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detailed_bg"
+        android:paddingBottom="20dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp" >
+
+        <TextView
+            android:id="@+id/messages_child_TXT_title"
+            style="@style/descriptiontext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/title" />
+
+        <RelativeLayout
+            android:id="@+id/messages_child_REL_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="3dp" >
+
+            <TextView
+                android:id="@+id/messages_child_TXT_title"
+                style="@style/descriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Points" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_child_TXT_title"
+                android:numStars="5"
+                android:rating="2.0"
+                android:stepSize="2.0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/messages_child_REL_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/messages_child_website"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/messages_child_TXT_address_line1"
+                style="@style/descriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/title" />
+
+            <TextView
+                android:id="@+id/messages_child_TXT_address_line2"
+                style="@style/descriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_child_TXT_address_line1"
+                android:singleLine="true"
+                android:text="@string/title" />
+
+            <TextView
+                android:id="@+id/messages_child_TXT_date"
+                style="@style/descriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_child_TXT_address_line2"
+                android:singleLine="true"
+                android:text="Posted On:" />
+
+            <TextView
+                android:id="@+id/messages_child_TXT_datedetails"
+                style="@style/descriptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_child_TXT_address_line2"
+                android:layout_toRightOf="@+id/messages_child_TXT_date"
+                android:singleLine="true"
+                android:text="08/15/2012" />
+
+            <ImageView
+                android:id="@+id/messages_child_IMG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_phone"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/messages_child_website"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <TextView
+                android:id="@+id/messages_child_TXT_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="www.copperlabs.net"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/messages_child_TXT_offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messages_child_TXT_website"
+                android:layout_centerHorizontal="true"
+                android:text="www.copperlabs.net"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

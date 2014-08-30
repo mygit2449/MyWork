@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+            android:id="@+id/hasanat_REL_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_title"
+            android:padding="10dp" >
+            
+        <ImageButton
+                android:id="@+id/hasanat_IMGB_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_alignBottom="@+id/give_BTN_current_location"
+                android:background="@drawable/btn_icon_list" />
+            
+    </RelativeLayout>
+	
+     <com.balloon.readystatesoftware.maps.TapControlledMapView
+            android:id="@+id/hasanat_mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="09z70SED3sHhmlzEV6iAPDDwekTQQEjigpppx0g"
+            android:clickable="true" />
+    
+
+</LinearLayout>

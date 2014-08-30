@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_light_blue" >
+
+    <RelativeLayout
+        android:id="@+id/description_photo_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/description_photo_TXT_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/description_photo_LIN_btn"
+        android:layout_below="@+id/description_photo_title"
+        android:layout_margin="5dp"
+        android:background="@drawable/no_image_available"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/description_IMG_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/description_photo_LIN_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" >
+
+        <Button
+            android:id="@+id/description_photo_BTN_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_icon_previous_pic_disable" />
+
+        <Button
+            android:id="@+id/description_photo_BTN_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_icon_next_pic_disable" />
+    </RelativeLayout>
+
+</RelativeLayout>

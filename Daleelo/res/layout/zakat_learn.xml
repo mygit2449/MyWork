@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/zakat_learn_REL_header"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/filter_background" >
+
+        <RelativeLayout
+            android:id="@+id/zakat_learn_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_title" >
+
+            <TextView
+                android:id="@+id/faqs_TXT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Learn"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/zakat_learn_Scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/zakat_learn_REL_header" 
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/zakat_learn_REL_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/zakat_learn_TXT_heading"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="heading"
+                    android:clickable="true"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:id="@+id/zakat_learn_REL_scroll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakat_learn_TXT_heading"
+                    android:layout_marginLeft="30dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_fuqaraa"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_fuqaraa"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Fuqaraa" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_fuqaraa"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_fuqaraa"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/fuqaraa"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_masakeen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_fuqaraa"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_masakeen"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Masakeen" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_masakeen"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_masakeen"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/Masakeen"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_ameleenaalayha"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_masakeen"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_ameleenaalayha"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Ameleena Alayha" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_ameleenaalayha"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_ameleenaalayha"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/Ameleena_Alayha"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_muallafaqolobohom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_ameleenaalayha"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_muallafaqolobohom"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Mu&apos;Allafa Qolobohom" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_muallafaqolobohom"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_muallafaqolobohom"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/MuAllafa_Qolobohom"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_raqab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_muallafaqolobohom"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_raqab"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Raqib" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_raqab"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_raqab"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/Riqab"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_ghrimeen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_raqab"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_ghrimeen"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Gharimeen" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_ghrimeen"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_ghrimeen"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/Gharimeen"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_fisabilillah"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_ghrimeen"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_fisabilillah"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Fi sabi &apos;Lillah" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_fisabilillah"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_fisabilillah"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/Fi_sabi_Lillah"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zakat_learn_REL_lbnassabil"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/zakat_learn_REL_fisabilillah"
+                        android:layout_marginTop="5dp" >
+
+                        <Button
+                            android:id="@+id/zakat_learn_BTN_lbnassabil"
+                            style="@style/ButtonNormalTextWithIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" lbn as&apos;Sabil" >
+                        </Button>
+
+                        <TextView
+                            android:id="@+id/zakat_learn_TXT_lbnassabil"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zakat_learn_BTN_lbnassabil"
+                            android:layout_marginLeft="21dp"
+                            android:text="@string/lbn_as_Sabil"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

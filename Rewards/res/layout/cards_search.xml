@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mycards_header_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/mycards_TXT_title"
+            style="@style/headertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="My Cards" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mycards_REL_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/mycards_header_REL"
+        android:background="@drawable/bgfull" >
+
+        <EditText
+            android:id="@+id/cards_search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type here to search" />
+
+        <ListView
+            android:id="@+id/cards_search_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/cards_search_edit" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textlistmainview_composenewmessage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textlistmainview_composenewmessage_newmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="New Message" />
+
+        <TextView
+            android:id="@+id/textlistmainview_composenewmessage_time"
+            android:layout_toRightOf="@+id/textlistmainview_composenewmessage_newmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:paddingBottom="5dp"
+            android:textColor="#0000FF"
+            android:paddingTop="10dp"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/textlistmainview_composenewmessage"
+            android:layout_below="@+id/textlistmainview_composenewmessage_newmessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="Compose New Message"
+            android:textSize="10dip" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/SMSlistView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gl_grey_bar"
+        android:divider="#000000"
+        android:dividerHeight="1dip"
+        android:scrollingCache="false" />
+
+</LinearLayout>

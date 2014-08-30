@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/addcards_header_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/addcards_TXT_title"
+            style="@style/headertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="My Cards" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addcards_REL_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/addcards_header_REL"
+        android:background="@drawable/bgfull" >
+
+        <RelativeLayout
+            android:id="@+id/addcards_REL_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" 
+            android:layout_marginTop="5dp">
+
+            <ImageButton
+                android:id="@+id/addcards_ImgBtn_addByCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/add_by_card" />
+            
+            <ImageButton
+                android:id="@+id/addcards_ImgBtn_addByBusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addcards_ImgBtn_addByCard"
+                android:background="@android:color/transparent"
+                android:src="@drawable/add_bybusiness" />
+            
+            <ImageButton
+                android:id="@+id/addcards_ImgBtn_addByScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addcards_ImgBtn_addByBusiness"
+                android:background="@android:color/transparent"
+                android:src="@drawable/add_by_scanning" />
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

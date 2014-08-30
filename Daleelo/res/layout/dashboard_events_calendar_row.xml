@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_parent_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/calendar_date_selector"
+     >
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"        
+        android:id="@+id/calendar_day_gridcell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:layout_marginLeft="7dp"
+        android:background="#00000000"       
+        android:text="54"
+        android:textColor="#306EFF" 
+        >
+    </TextView>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+       
+
+        <ImageView
+            android:id="@+id/event_dot_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+           
+                    
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/calendar_day_gridcell1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"   
+        android:layout_marginRight="7dp"     
+        android:background="#00000000"
+        android:text="55"
+        android:textColor="#FF0000" 
+        />
+
+</RelativeLayout>

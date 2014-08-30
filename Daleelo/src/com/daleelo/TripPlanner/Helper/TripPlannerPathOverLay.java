@@ -1,0 +1,119 @@
+package com.daleelo.TripPlanner.Helper;
+
+import java.util.ArrayList;
+
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Point;
+import android.util.Log;
+
+import com.daleelo.TripPlanner.Activities.TripPlannerRoadModel;
+import com.google.android.maps.GeoPoint;
+import com.google.android.maps.MapController;
+import com.google.android.maps.MapView;
+import com.google.android.maps.Overlay;
+import com.google.android.maps.OverlayItem;
+
+public class TripPlannerPathOverLay  extends Overlay {
+
+	
+	
+	ArrayList<TripPlannerRoadModel> road;
+	MapView mv;
+	ArrayList<GeoPoint> mPoints; 
+	
+	
+	public TripPlannerPathOverLay(ArrayList<TripPlannerRoadModel> road,MapView mv) {
+		
+		  this.road = road;
+		  this.mv = mv;
+		  Log.v("road size *******","d"+road.size());
+		  mPoints = new ArrayList<GeoPoint>(); 
+		  showPathOnMap();
+		 
+	} 
+	
+	private void showPathOnMap() {
+		if(road.size()>0){
+			  mPoints.clear();	
+			 for(int x=0;x<road.size();x++){	  
+				  
+				 // mRoad = road.get(x); 			  
+	//			  if(road.get(x).mRoute.length > 0) { 
+	//				
+	//				for (int i = 0; i < road.get(x).mRoute.length; i++) { 
+	//				mPoints.add(new GeoPoint((int) (road.get(x).mRoute[i][1] * 1000000),(int) (road.get(x).mRoute[i][0] * 1000000)));
+	//				
+	//				} 
+	//			  }
+				 //new code
+				
+				 for(int i = 0; i < road.get(x).lat_arr.size(); i++){ 		
+					   				   
+					  mPoints.add(new GeoPoint((int) (road.get(x).lat_arr.get(i)*1000000),(int) (road.get(x).long_arr.get(i)*1000000)));
+				 } 
+			}
+	  }
+
+			Log.v("mpoints size",""+mPoints.size());
+		      if(mPoints.size()>0){  
+		    	  
+				int moveToLat = (mPoints.get(0).getLatitudeE6() + (mPoints.get(mPoints.size() - 1).getLatitudeE6() - mPoints.get(0).getLatitudeE6()) / 2); 
+				int moveToLong = (mPoints.get(0).getLongitudeE6() + (mPoints.get(mPoints.size() - 1).getLongitudeE6() - mPoints.get(0).getLongitudeE6()) / 2); 
+				GeoPoint moveTo = new GeoPoint(moveToLat, moveToLong); 
+				
+				MapController mapController = mv.getController(); 
+				mapController.animateTo(moveTo); 
+				mapController.setZoom(7); 
+		      }
+	
+}
+
+
+	@Override 
+	public boolean draw(Canvas canvas, MapView mv, boolean shadow, long when) { 
+		super.draw(canvas, mv, shadow); 
+		drawPath(mv, canvas); 	
+		return true; 
+	} 
+	
+		public void drawPath(MapView mv, Canvas canvas){ 
+			
+			int x1 = -1, y1 = -1, x2 = -1, y2 = -1; 
+			Paint paint = new Paint(); 
+			paint.setColor(Color.rgb(76, 99, 160)); 
+			paint.setStyle(Paint.Style.STROKE);				
+	        paint.setStrokeJoin(Paint.Join.ROUND);
+	        paint.setStrokeCap(Paint.Cap.ROUND);
+			paint.setStrokeWidth(3); 
+			paint.setAntiAlias(true);
+		    paint.setDither(true);
+			for (int i = 0; i < mPoints.size(); i++) { 
+			Point point = new Point(); 
+			mv.getProjection().toPixels(mPoints.get(i), point); 
+			x2 = point.x; 
+			y2 = point.y; 
+			if (i > 0){ 
+				
+				canvas.drawLine(x1, y1, x2, y2, paint); 
+			} 
+				x1 = x2; 
+				y1 = y2; 
+			} 
+		}
+	
+
+
+		
+
+
+		
+
+		
+
+	
+
+	
+
+}

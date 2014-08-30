@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MyNewXmlActivity!</string>
+    <string name="app_name">MyNewXml</string>
+    <string name="title">Here Tile</string>
+    <string name="description">Here Description</string>
+    <string name="pubdate">Here Date</string>
+</resources>

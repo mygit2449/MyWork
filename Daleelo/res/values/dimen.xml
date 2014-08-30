@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="Da_Title_Text_size">20dp</dimen>
+    <dimen name="Da_Sub_TitleText_size">19dp</dimen>
+    <dimen name="Da_List_Title_size">18dp</dimen>
+    <dimen name="Da_List_Text_size">15dp</dimen>
+    <dimen name="Da_Desp_Text_size">16dp</dimen>
+    <dimen name="Da_Desp_Text_Small_size">14dp</dimen>
+    <dimen name="Da_Desp_Text_Very_Small_size">12dp</dimen>
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout_LL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_bgs"
+    >
+
+    <TextView 
+        android:id="@+id/popup_layout_TXT_info"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="simple pop up for testing daleelo. this is the image for showing various things.gkjgjhhjvbjbvjhvgk,bjhjvjbvjbhvvbjhjvbjhhvjjhvhjmhvhjvhjvjhvjhvhjgikgyffcgchgjfvchvhjcvghfjvhg"/>
+
+</LinearLayout>
